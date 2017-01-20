@@ -34,16 +34,20 @@ CACHES = {
 # -----------------------------------------------------------------------------
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(str(ROOT_DIR), 'db.sqlite3'),
+        'NAME': env("DB_DEFAULT_NAME"),
+        'ENGINE': env("DB_DEFAULT_ENGINE"),
+        'USER': env("DB_DEFAULT_USER"),
+        'PASSWORD': env("DB_DEFAULT_PASSWORD"),
+        'HOST': env("DB_DEFAULT_HOST"),
+        'PORT': env("DB_DEFAULT_PORT"),
     },
     'wordpress': {
-        'NAME': 'wordpress',
-        'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',
-        'PORT': '3306',
+        'NAME': env("DB_WORDPRESS_NAME"),
+        'ENGINE': env("DB_WORDPRESS_ENGINE"),
+        'USER': env("DB_WORDPRESS_USER"),
+        'PASSWORD': env("DB_WORDPRESS_PASSWORD"),
+        'HOST': env("DB_WORDPRESS_HOST"),
+        'PORT': env("DB_WORDPRESS_PORT"),
     }
 }
 
