@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-19 21:36-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: nutriologa/apps/recipes/models.py:12 nutriologa/apps/recipes/models.py:43
+msgid "Title"
+msgstr "Titulo"
+
+#: nutriologa/apps/recipes/models.py:19
+msgid "Youtube URL"
+msgstr "Youtube Link"
+
+#: nutriologa/apps/recipes/models.py:26
+msgid "Youtube video ID"
+msgstr "Youtube video ID"
+
+#: nutriologa/apps/recipes/models.py:33
+msgid "Video"
+msgstr "Video"
+
+#: nutriologa/apps/recipes/models.py:34
+msgid "videos"
+msgstr "Videos"
+
+#: nutriologa/apps/recipes/models.py:50
+msgid "Image"
+msgstr "Imagen"
+
+#: nutriologa/apps/recipes/models.py:57
+msgid "Description"
+msgstr "Descripción"
+
+#: nutriologa/apps/recipes/models.py:63
+msgid "Category"
+msgstr "Categoria"
+
+#: nutriologa/core/messages.py:9
+msgid "This field can not be blank"
+msgstr ""
+
+#: nutriologa/core/messages.py:10
+#, python-format
+msgid "There is a %(model_name)s with this %(field_label)s already registred"
+msgstr ""
+
+#: nutriologa/core/messages.py:11
+msgid "The data do not match"
+msgstr ""
+
+#: nutriologa/core/messages.py:12
+msgid "The username or password are incorrect"
+msgstr ""
+
+#: nutriologa/core/messages.py:13
+msgid "This account is inactive"
+msgstr ""
+
+#: nutriologa/core/messages.py:14
+msgid "The password is incorrect"
+msgstr ""
+
+#: nutriologa/core/messages.py:18
+msgid "Profile updated"
+msgstr ""
