@@ -43,6 +43,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+    'nutriologa.core',
     'nutriologa.apps.recipes',
     'nutriologa.apps.wordpress',
 )
@@ -149,4 +150,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
 DATABASE_ROUTERS = ['nutriologa.apps.wordpress.router.WordpressRouter']
+
+WORDPRESS_SITE_URL = env('WORDPRESS_SITE_URL')
