@@ -1,3 +1,4 @@
+{% load settings_tag %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 </head>
 <body>
   {% for post in posts %}
-    <h3>{{ post.post_title }}</h3>
+    <h3>{{ post.id }} - {{ post.post_title }}</h3>
     <ul>
       <li>Autor: {{ post.post_author }}</li>
       <li>Fecha: {{ post.post_date }}</li>
@@ -16,9 +17,19 @@
       <li>
         {{ post.post_content }}
       </li>
-
+      <li>
+        {{ post.post_type }}
+      </li>
+      <li>
+        {% for thumbnail in thumbnails %}
+          {% if thumbnail.post_id == post.id %}
+            <img src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">
+          {% else %}
+            <img src="http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg" alt="">
+          {% endif %}
+        {% endfor %}
+      </li>
     </ul>
   {% endfor %}
-
 </body>
 </html>
