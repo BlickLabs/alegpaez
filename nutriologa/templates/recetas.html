@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<!-- section 1 services -->
+<section>
+    <div class="container custom_container">
+        <div class="row">
+			<!-- section part 1 -->
+            <div class="col-lg-8 col-md-offset-2 text-center">
+              <div class="receipts-container">
+                 <div class="title">Recetas</div>
+                 <div class="container-menu">
+                   <div class="button">Todas</div>
+                   <div class="button">Desayunos</div>
+                   <div class="button">Colaciones</div>
+                   <div class="button">Comidas</div>
+                   <div class="button">Cenas</div>
+                 </div>
+              </div>
+            </div>
+
+            <div class="col-lg-10 col-md-offset-1 text-center sectionPadding">
+              <div class="wrap">
+                {% for recipe in recipes%}
+                  <div class="receip-content">
+                    <div class="recipt" style="background-image:URL('{{recipe.image.url}}')">
+                    </div>
+                    {% if recipe.category == 'breakfast'%}
+                    	<div class="name-receipt breakfast">{{recipe.title}}</div>
+    								{% elif recipe.category == 'collation' %}
+                      <div class="name-receipt colations">{{recipe.title}}</div>
+                    {% elif recipe.category == 'dinner' %}
+                      <div class="name-receipt dinner">{{recipe.title}}</div>
+                    {% elif recipe.category == 'meal' %}
+                      <div class="name-receipt meats">{{recipe.title}}</div>
+    								{% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /section 1 services -->
+{% endblock %}
