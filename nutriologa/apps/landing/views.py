@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*
+from django.views.generic import ListView
 from django.views.generic import TemplateView
 
 from nutriologa.apps.wordpress.models import WpPosts, WpPostmeta
@@ -12,20 +13,25 @@ class Thumbnail():
         self.url = url
 
 
-class RecipesTemplateView(TemplateView):
+class RecipesTemplateView(ListView):
     template_name = 'recetas.html'
-    def get_context_data(self, **kwargs):
-        context = super(RecipesTemplateView, self).get_context_data(**kwargs)
-        recipes = Recipe.objects.all()
-        context['recipes'] = recipes
-        return context
+    model = Recipe
+    context_object_name = 'recipes'
+
+    def get_queryset(self,):
+        arg = self.request.GET.get('u')
+        if arg:
+            queryset = self.model.objects.filter(category=arg).order_by('-date')
+        else:
+            queryset = self.model.objects.all().order_by('-date')
+        return queryset
 
 
 class VideosTemplateView(TemplateView):
     template_name = 'videos.html'
     def get_context_data(self, **kwargs):
         context = super(VideosTemplateView, self).get_context_data(**kwargs)
-        videos = Video.objects.all()
+        videos = Video.objects.all().order_by('-date')
         context['videos'] = videos
         return context
 

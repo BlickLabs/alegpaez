@@ -17,11 +17,11 @@
               <div class="receipts-container">
                  <div class="title">Recetas</div>
                  <div class="container-menu">
-                   <div class="button">Todas</div>
-                   <div class="button">Desayunos</div>
-                   <div class="button">Colaciones</div>
-                   <div class="button">Comidas</div>
-                   <div class="button">Cenas</div>
+                   <a href="{% url 'landing:recetas' %}" class="button">Todas</a>
+                   <a href="{% url 'landing:recetas' %}?u=breakfast" class="button">Desayunos</a>
+                   <a href="{% url 'landing:recetas' %}?u=collation" class="button">Colaciones</a>
+                   <a href="{% url 'landing:recetas' %}?u=meal" class="button">Comidas</a>
+                   <a href="{% url 'landing:recetas' %}?u=dinner" class="button">Cenas</a>
                  </div>
               </div>
             </div>
