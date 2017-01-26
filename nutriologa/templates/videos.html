@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<!-- section 1 services -->
+<section>
+    <div class="container custom_container">
+        <div class="row">
+			<!-- section part 1 -->
+            <div class="col-lg-10 col-md-offset-1 text-center">
+              <div class="videos-container">
+                 <div class="title">Videos</div>
+                 <div class="video-thumb">
+                   {% for video in videos%}
+                     <div class="miniclip">
+                       <div class="arrow" style="background-image:URL('https://img.youtube.com/vi/{{video.youtube_video_id}}/0.jpg')">
+                         <img class="play" data-attribute='{{video.youtube_video_url}}' src="{% static 'img/videos/page-1.png' %}"/>
+                       </div>
+                       <div class="name-clip">{{video.title}}</div>
+                     </div>
+                   {% endfor %}
+                 </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /section 1 services -->
+{% endblock %}
