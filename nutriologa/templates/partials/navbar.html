@@ -1,0 +1,53 @@
+{% load static from staticfiles %}
+<nav id="mainNav" class="navbar navbar-default myconatiner">
+	<!-- homepage navbar -->
+	<div class="container nav_container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            	data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <div class="cherry_wrapper">
+            	<a class="navbar-brand page-scroll" href="{% url 'landing:home' %}"> <img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}"></a>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+								{% if request.path == '/recetas/' %}
+                	<li class="select">
+										<a class="page-scroll" href="{% url 'landing:recetas'%}">Recetas</a>
+                	</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:recetas'%}">Recetas</a>
+									</li>
+								{% endif %}
+								{% if request.path == '/videos/' %}
+                	<li class="select">
+										<a class="page-scroll" href="{% url 'landing:videos'%}">Videos</a>
+                	</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:videos'%}">Videos</a>
+									</li>
+								{% endif %}
+                <li>
+                    <a class="page-scroll" href="#paquetes">Paquetes</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#acerca-de-mi">Acerca de mi</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://blog.alegpaez.com/" target='_blank'>Blog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+    <!-- /homepage navbar -->
+</nav>
