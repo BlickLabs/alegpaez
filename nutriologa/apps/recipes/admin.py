@@ -14,4 +14,5 @@ class VideoAdmin(admin.ModelAdmin):
 
 @admin.register(models.Recipe)
 class RecipeAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'category')
+    list_filter = ('category',)
