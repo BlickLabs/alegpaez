@@ -10,4 +10,12 @@ urlpatterns = [
     url(regex=r'^$',
         view=views.HomeTemplateView.as_view(),
         name='home'),
+
+    url(regex=r'^videos/$',
+        view=views.VideosTemplateView.as_view(),
+        name='videos'),
+
+    url(regex=r'^recetas/$',
+        view=views.RecipesTemplateView.as_view(),
+        name='recetas'),
 ]
