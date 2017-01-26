@@ -29,6 +29,10 @@ class Video(models.Model):
         max_length=100,
     )
 
+    date = models.DateTimeField(
+        auto_now_add=True,
+    )
+
     class Meta:
         verbose_name = _('Video')
         verbose_name_plural = _('videos')
@@ -71,6 +75,14 @@ class Recipe(models.Model):
             ('dinner', 'Cenas'),
         )
     )
+
+    date = models.DateTimeField(
+        auto_now_add=True,
+    )
+
+    class Meta:
+        verbose_name = _('Recipe')
+        verbose_name_plural = _('Recipes')
 
     def __str__(self):
         return self.title
