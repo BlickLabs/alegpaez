@@ -23,11 +23,35 @@
               <div class="receipts-container">
                  <div class="title">Recetas</div>
                  <div class="container-menu">
-                   <a href="{% url 'landing:recetas' %}" class="button">Todas</a>
-                   <a href="{% url 'landing:recetas' %}?u=breakfast" class="button">Desayunos</a>
-                   <a href="{% url 'landing:recetas' %}?u=collation" class="button">Colaciones</a>
-                   <a href="{% url 'landing:recetas' %}?u=meal" class="button">Comidas</a>
-                   <a href="{% url 'landing:recetas' %}?u=dinner" class="button">Cenas</a>
+                   {% if request.get_full_path == '/recetas/' %}
+                     <a href="{% url 'landing:recetas' %}" class="button menuActive">Todas</a>
+                   {% else %}
+                     <a href="{% url 'landing:recetas' %}" class="button">Todas</a>
+                   {% endif %}
+
+                   {% if request.get_full_path == '/recetas/?u=breakfast' %}
+                     <a href="{% url 'landing:recetas' %}?u=breakfast" class="button menuActive">Desayunos</a>
+                   {% else %}
+                     <a href="{% url 'landing:recetas' %}?u=breakfast" class="button">Desayunos</a>
+                   {% endif %}
+
+                   {% if request.get_full_path == '/recetas/?u=collation' %}
+                     <a href="{% url 'landing:recetas' %}?u=collation" class="button menuActive">Colaciones</a>
+                   {% else %}
+                     <a href="{% url 'landing:recetas' %}?u=collation" class="button">Colaciones</a>
+                   {% endif %}
+
+                   {% if request.get_full_path == '/recetas/?u=meal' %}
+                     <a href="{% url 'landing:recetas' %}?u=meal" class="button menuActive">Comidas</a>
+                   {% else %}
+                     <a href="{% url 'landing:recetas' %}?u=meal" class="button">Comidas</a>
+                   {% endif %}
+
+                   {% if request.get_full_path == '/recetas/?u=dinner' %}
+                     <a href="{% url 'landing:recetas' %}?u=dinner" class="button menuActive">Cenas</a>
+                   {% else %}
+                     <a href="{% url 'landing:recetas' %}?u=dinner" class="button">Cenas</a>
+                   {% endif %}
                  </div>
               </div>
             </div>
