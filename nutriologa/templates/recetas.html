@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static from staticfiles %}
 {% block meta %}
 {% endblock %}
 
@@ -33,13 +33,13 @@
                     <div class="recipt" style="background-image:URL('{{recipe.image.url}}')">
                     </div>
                     {% if recipe.category == 'breakfast'%}
-                    	<div class="name-receipt breakfast">{{recipe.title}}</div>
+                    	<div class="name-receipt breakfast"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
     								{% elif recipe.category == 'collation' %}
-                      <div class="name-receipt colations">{{recipe.title}}</div>
+                      <div class="name-receipt colations"><img class="smallIcon" src="{% static 'img/receipts/colations.png'%}"/>{{recipe.title}}</div>
                     {% elif recipe.category == 'dinner' %}
-                      <div class="name-receipt dinner">{{recipe.title}}</div>
+                      <div class="name-receipt dinner"><img class="smallIcon" src="{% static 'img/receipts/snack.png'%}"/>{{recipe.title}}</div>
                     {% elif recipe.category == 'meal' %}
-                      <div class="name-receipt meats">{{recipe.title}}</div>
+                      <div class="name-receipt meats"><img class="smallIcon" src="{% static 'img/receipts/meats.png'%}"/>{{recipe.title}}</div>
     								{% endif %}
                   </div>
                 {% endfor %}
