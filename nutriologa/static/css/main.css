@@ -72,6 +72,15 @@
   align-items: flex-end;
   flex-direction: column;
 }
+.mainTitle {
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  font-family: FuturaStd-Bold;
+  width: 100%;
+  margin-top: -121px;
+  color: white;
+}
 .sectionTwo {
   display: flex;
   line-height: 17px;
@@ -359,11 +368,50 @@ input.form-control1:focus {
   }
 }
 @media only screen and (max-width:768px) and (max-width:769px) {
-.navbar .navbar-nav {
-  width: 100%;
-  text-align: center;
-  height: auto;
-}
+  .navbar .navbar-nav {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+  .images {
+    margin: 0 auto;
+  }
+  .notShow {
+    display: none;
+  }
+  .lastSection {
+    padding-bottom: 100px;
+  }
+  .sectionTwo {
+    display: flex;
+    flex-direction: column;
+    line-height: 17px;
+    margin: 0px auto 0px auto;
+    font-size: 17px;
+    width: auto;
+    font-family: FuturaStd-Medium;
+    color: #4a4a4a;
+    padding-top: 59px;
+    padding-left: 0px;
+    padding-right: 27px;
+    padding-bottom: 33px;
+    justify-content: center;
+  }
+  .parallaxContain {
+    line-height: 16px;
+    margin: -46px auto 0px auto;
+    border: solid 1px #e5e5e5;
+    background: white;
+    font-size: 16px;
+    text-align: initial;
+    width: auto;
+    font-family: FuturaStd-Medium;
+    color: #4a4a4a;
+    padding-top: 41px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 33px;
+  }
 .select {
   height: auto;
 }
