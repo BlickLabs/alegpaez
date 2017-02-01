@@ -12,6 +12,12 @@ class Thumbnail():
         self.post_id = post_id
         self.url = url
 
+class AboutTemplateView(TemplateView):
+    template_name = 'acerca.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutTemplateView, self).get_context_data(**kwargs)
+        return context
 
 class RecipesTemplateView(ListView):
     template_name = 'recetas.html'

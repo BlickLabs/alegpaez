@@ -9,13 +9,23 @@
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
             <div class="cherry_wrapper">
-            	<a class="navbar-brand page-scroll" href="{% url 'landing:home' %}"> <img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}"></a>
+            	<a class="navbar-brand page-scroll" href="{% url 'landing:home' %}">
+								{% if request.path == '/' %}
+									<img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}" class="cerryLogo">
+								{% else %}
+									<img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}">
+								{% endif %}
+							</a>
             </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+						{% if request.path == '/' %}
+							<ul class="nav navbar-nav marginCustomTop">
+						{% else %}
+							<ul class="nav navbar-nav">
+						{% endif %}
 								{% if request.path == '/recetas/' %}
                 	<li class="select">
 										<a class="page-scroll" href="{% url 'landing:recetas'%}">Recetas</a>
@@ -35,7 +45,7 @@
 									</li>
 								{% endif %}
                 <li>
-                    <a class="page-scroll" href="#paquetes">Paquetes</a>
+                    <a class="page-scroll" href="#paquetes">Servicios</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#acerca-de-mi">Acerca de mi</a>

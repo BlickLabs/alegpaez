@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<!-- section 1 services -->
+<section class="sectionWithoutPadding">
+    <div class="">
+        <div class="row rowBgColor">
+          <div class="parallax"></div>
+
+          <div class="parallaxContain">
+            <p>Estudié la carrera de <span class="stronger">Nutrición y Ciencias de los Alimentos</span> en la Universidad Iberoamericana de Puebla. Durante la carrera me certifiqué cómo <span class="stronger">Health Coach</span> ante el Instituto Mexicano de <span class="stronger">Nutriología Clínica.</span></p>
+            <p>Al graduarme de la carrera tomé el diplomado de <span class="stronger">nutrición deportiva</span> por parte de <span class="stronger">Sport Med</span>, clínica por excelencia de FIFA y un año después me convertí en <span class="stronger">educadora de diabetes por parte del Consejo Nacional de Educadores en Diabetes.</span></p>
+            <p>Actualmente doy <span class="stronger">consultas privadas</span>, soy nutrióloga del <span class="stronger">instituto cardiovascular de puebla</span> y formo parte del equipo de <span class="stronger">nutriólogas de Grupo Danone México.</span></p>
+          </div>
+          <div class="sectionTwo">
+            <div>
+              <img class="avatar" src='{% static "img/bg-img/avatar.png"%}'/>
+              <img class="caption-one" src='{% static "img/icons/coment2.svg"%}'/>
+            </div>
+            <div class="second">
+              <p class="font-Size">Lic. en Nutrición</p>
+              <p class="principalTitle">Alejandra Gutiérrez Paez</p>
+              <p class="paddingBottom">Busco mejorar los hábitos y la calidad de vida de las personas mediante la alimentación, crear conciencia sobre los alimentos que cada persona introduce a su cuerpo, demostrar que tener un peso saludable no es imposible, al contrario, es muy fácil una vez que se hacen las pases con la comida y se aprende a comer.</p>
+              <p>Mediante los planes de alimentación que ofrezco podrás activar tu metabolismo y olvidarte de las dietas restrictivas y del rebote. Mis planes de alimentación son totalmente personalizados para cada persona de acuerdo a sus necesidades, gustos y estilo de vida. También se ofrecen asesorías vía Whatsapp cuando el cliente las necesite dónde sea y cuando sea.</p>
+            </div>
+          </div>
+          <div class="lastSection">
+            <img class="caption-two" src='{% static "img/icons/coment.svg"%}'/>
+          </div>
+        </div>
+    </div>
+</section> <!-- /section 1 services -->
+{% endblock %}
