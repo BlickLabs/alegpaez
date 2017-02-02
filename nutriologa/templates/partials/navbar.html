@@ -44,12 +44,24 @@
 										<a class="page-scroll" href="{% url 'landing:videos'%}">Videos</a>
 									</li>
 								{% endif %}
-                <li>
-                    <a class="page-scroll" href="#paquetes">Servicios</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#acerca-de-mi">Acerca de mi</a>
-                </li>
+								{% if request.path == '/servicios/' %}
+									<li class="select">
+										<a class="page-scroll" href="{% url 'landing:servicios'%}">Servicios</a>
+									</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:servicios'%}">Servicios</a>
+									</li>
+								{% endif %}
+								{% if request.path == '/acerca/' %}
+									<li class="select">
+										<a class="page-scroll" href="{% url 'landing:acerca'%}">Acerca de mi</a>
+									</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:acerca'%}">Acerca de mi</a>
+									</li>
+								{% endif %}
                 <li>
                     <a class="page-scroll" href="http://blog.alegpaez.com/" target='_blank'>Blog</a>
                 </li>

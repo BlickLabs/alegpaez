@@ -18,8 +18,13 @@ urlpatterns = [
     url(regex=r'^recetas/$',
         view=views.RecipesTemplateView.as_view(),
         name='recetas'),
+
     url(regex=r'^acerca/$',
         view=views.AboutTemplateView.as_view(),
         name='acerca'),
+
+    url(regex=r'^servicios/$',
+        view=views.ServicesTemplateView.as_view(),
+        name='servicios'),
 
 ]

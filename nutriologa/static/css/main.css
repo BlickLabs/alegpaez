@@ -12,6 +12,161 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.serviceContainer {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 82px auto 0 auto;
+  align-items: flex-start;
+}
+.margin-top-custom {
+  margin-bottom: 44px !important;
+}
+.removeBottom {
+  padding: 81px 0 81px!important;
+}
+.square > img{
+  padding-right: 69px;
+  padding-left: 37px;
+}
+.gray-container {
+  background: #f5f5f5;
+  width: 100%;
+  text-align: center;
+  padding-top: 41px;
+}
+.square > div{
+  text-align: center;
+}
+.package-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 53px;
+  flex-direction: row;
+  justify-content: center;
+}
+.buttonRecipe {
+  width: 168px;
+  height: 54px;
+  background-color: #ed7161;
+  border: 0px;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  color: white;
+}
+.addMarginBottom {
+  margin-bottom: 64px;
+}
+.buttonRecipe:focus {
+  outline: none;
+}
+.package {
+  width: 287px;
+  display: flex;
+  flex-direction: column;
+}
+.mini-square {
+  margin-top: 20px;
+  border: solid 1px #e5e5e5;
+  width: 256px;
+  height: 127px;
+  padding-top: 32px;
+  background: white;
+}
+.mini-square > p{
+  font-size: 17px;
+  font-family: FuturaStd-Book;
+}
+.bold {
+  font-size: 16px !important;
+  font-family: FuturaStd-Bold !important;
+  line-height: 16px;
+  padding-left: 28px;
+  padding-right: 22px;
+}
+.minifont {
+  font-size: 16px !important;
+  font-family: FuturaStd-Medium !important;
+  line-height: 1px;
+}
+.amount {
+  padding-top: 8px;
+}
+.special-amount {
+  padding-top: 3px !important;
+}
+.column {
+  flex-direction: column !important;
+  border: solid 1px #e5e5e5;
+  padding-left: 50px;
+  height: 275px !important;
+  padding-top: 27px !important;
+  padding-bottom: 40px !important;
+}
+.removeTop {
+  margin-top: 28px !important;
+}
+.list > img {
+  padding-right: 10px;
+}
+.list > p {
+  text-align: left;
+  line-height: 15px;
+  width: 286px;
+  font-family: FuturaStd-Book;
+  font-size: 14px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+}
+.listSpecial > .list{
+  width: 98% !important;
+  margin-bottom: 46px;
+}
+.listSpecial > .list > p{
+  width: 88% !important;
+}
+.listSpecial {
+  padding-left: 18px !important;
+}
+.title-offert {
+  font-family: FuturaStd-Bold;
+  font-size: 17px;
+  color: white;
+}
+.title-small-offert {
+  font-family: FuturaStd-Book;
+  font-size: 17px;
+  color: white;
+}
+.square {
+  align-items: flex-start;
+  width: 450px;
+  height: 127px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 43px;
+  padding-bottom: 35px;
+}
+.color-one {
+  background: #ed7161;
+  margin-right: 27px;
+}
+.margin-left-one {
+  margin-left: 27px;
+}
+.margin-right-one {
+  margin-right: 27px;
+}
+.color-two {
+  background: #f5b262;
+  margin-left: 27px;
+}
 .parallax {
     /* The image used */
     background-image: url("../img/bg-img/about.png");
@@ -30,6 +185,7 @@
 }
 .rowBgColor {
   background: #f5f5f5;
+  margin: 0px !important;
 }
 .font-Size {
   font-size: 18px;
@@ -291,7 +447,14 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   font-family: FuturaStd-Medium;
 }
 .navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
-.navbar .navbar-header .navbar-brand img{width:173px}.navbar .navbar .collapse.navbar-collapse{margin-top:0!important}
+.navbar .navbar-header .navbar-brand img{
+  width:173px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}.navbar .navbar .collapse.navbar-collapse{margin-top:0!important}
 .navbar-nav > li > a {
   line-height: 26px !important;
 
@@ -373,6 +536,21 @@ input.form-control1:focus {
     text-align: center;
     height: auto;
   }
+  .overflow {
+    overflow: auto;
+  }
+  .mini-square {
+    width: 100%;
+  }
+
+  .package {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .addMarginBottom {
+    margin-bottom: 125px;
+  }
+
   .images {
     margin: 0 auto;
   }
@@ -381,6 +559,10 @@ input.form-control1:focus {
   }
   .lastSection {
     padding-bottom: 100px;
+  }
+
+  .package-container {
+    flex-direction: column;
   }
   .sectionTwo {
     display: flex;

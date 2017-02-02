@@ -19,6 +19,14 @@ class AboutTemplateView(TemplateView):
         context = super(AboutTemplateView, self).get_context_data(**kwargs)
         return context
 
+
+class ServicesTemplateView(TemplateView):
+    template_name = 'servicios.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ServicesTemplateView, self).get_context_data(**kwargs)
+        return context
+
 class RecipesTemplateView(ListView):
     template_name = 'recetas.html'
     model = Recipe
