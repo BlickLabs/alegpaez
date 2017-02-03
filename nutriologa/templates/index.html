@@ -6,189 +6,145 @@
   {% include "partials/carrousel.html" %}
 {% endblock %}
 {% block content %}
-  <section>
+  <section class="small-images">
       <div class="container custom_container">
-          <div class="row">
-        <!-- section part 1 -->
-              <div class="col-sm-6 col-lg-3 col-md-6 text-center">
+          <div class="row flex_container">
+              <div class="text-center">
                   <div class="service-box">
-                      <img class="sr-icons" src="{% static 'img/icons/fill-1@3x.png'%}">
-                      <p class="service_text"> Health Coach </p>
+                      <img class="sr-icons one" src="{% static 'img/icons/fill-1@3x.png'%}">
+                      <p class="service_text custom-height"> Health Coach </p>
                   </div>
               </div>
 
-              <!-- section part 2 -->
-              <div class="col-sm-6 col-lg-3 col-md-6 text-center">
-                  <div class="service-box">
-                      <img class="sr-icons" src="{% static 'img/icons/page-1@3x.png'%}">
-                      <p class="service_text"> Consultas <br> presenciales y online </p>
+              <div class="text-center">
+                  <div class="service-box special-width">
+                      <img class="sr-icons two" src="{% static 'img/icons/page-1@3x.png'%}">
+                      <p class="service_text"> Consultas presenciales y online </p>
                   </div>
               </div>
 
-              <!-- section part 3 -->
-              <div class="col-sm-6 col-lg-3 col-md-6 text-center">
+
+              <div class="text-center">
                   <div class="service-box">
-                      <img class="sr-icons" src="{% static 'img/icons/group-37@3x.png'%}">
-                      <p class="service_text"> Educadora en <br> Diabetes </p>
+                      <img class="sr-icons three" src="{% static 'img/icons/group-37@3x.png'%}">
+                      <p class="service_text"> Educadora en Diabetes </p>
                   </div>
               </div>
 
               <!-- section part 4 -->
-              <div class="col-sm-6 col-lg-3 col-md-6 text-center">
+              <div class="text-center">
                   <div class="service-box">
-                      <img class="sr-icons" src="{% static 'img/icons/group-36@3x.png'%}">
-                      <p class="service_text"> Nutrición <br> deportiva </p>
+                      <img class="sr-icons four" src="{% static 'img/icons/group-36@3x.png'%}">
+                      <p class="service_text custom-height-two"> Nutrición deportiva </p>
                   </div>
               </div>
-          </div>
-      </div>
-  </section> <!-- /section 1 services -->
-
-  <!-- section 2 testimonals -->
-  <section id="testimonials" class="testimonials bg-primary myconatiner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 text-center tm_content">
-            <h1 class="tm_title"> Algunos de nuestros clientes </h1>
-              </div>
-
-              <div class="row">
-                  <div class="col-md-4 col-lg-4 tm_1">
-                    <div class="thumbnail">
-                      <div class="user_img">
-                        <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-6@3x.png'%}">
-                      </div>
-                      <div class="caption">
-                        <h2 class="user_name" style="text-align: center;"> Mario Hernández </h2>
-                        <p class="sub_caption" style="text-align: center;"> “Increíble el servicio <br> fue lo mejor que he <br> hecho por mi” </p>
-                      </div>
-                    </div>
-                  </div>
-
-            <div class="col-md-4 col-lg-4 tm_1">
-                    <div class="thumbnail">
-                      <div class="user_img">
-                        <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-5@3x.png'%}">
-                      </div>
-                      <div class="caption">
-                        <h2 class="user_name" style="text-align: center;"> Alejandro Moreno </h2>
-                        <p class="sub_caption" style="text-align: center;"> “Increíble el servicio <br> fue lo mejor que he <br> hecho por mi” </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 col-lg-4 tm_1">
-                    <div class="thumbnail">
-                      <div class="user_img">
-                        <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-7@3x.png'%}">
-                      </div>
-                      <div class="caption">
-                        <h2 class="user_name" style="text-align: center;"> Victoria Landa </h2>
-                        <p class="sub_caption" style="text-align: center;"> “Increíble el servicio <br> fue lo mejor que he <br> hecho por mi” </p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        </div>
-      </div>
-  </section> <!-- /section 2 testimonals -->
-
-  <!-- section 3 gallary -->
-  <section class="gallary myconatiner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 text-center blog_content">
-            <h1 class="gallary_title"> Últimas recetas </h1>
-                  <h3 class="sub_heading1"> Conoce las diferentes y fáciles recetas que te puedes <br> hacer en cualquier momento del día </h3>
-              </div>
-          </div>
-      </div>
-
-      <div class="container-fluid gallary_area">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 full-width-img">
-            <img class="img-responsive" src="{% static 'img/bg-img/food1.png'%}" style="width: 506px; height: 450px;">
-          </div>
-
-              <div class="col-lg-4 col-md-4 full-width-img">
-                  <img class="img-responsive" src="{% static 'img/bg-img/chinese3.png'%}" style="width: 506px; height: 450px;">
-              </div>
-
-              <div class="col-lg-4 col-md-4 full-width-img">
-                  <img class="img-responsive" src="{% static 'img/bg-img/food2.png'%}" style="width: 506px; height: 450px;">
-              </div>
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="more_btn">
-          <button class="btn btn-xl-more btn-primary"> <a class="link_morebtn" href="#more" style="color: white;"> Ver más </a> </button>
-        </div>
-      </div>
-
-  </section> <!-- /section 3 testimonals -->
-
-  <!-- section 4 blog_post -->
-  <section class="blog_post" id="blogs">
-    <div class="container blog_container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 text-center blog_content">
-            <h1 class="blog_title"> Blogposts destacados </h1>
-              </div>
-
-              <div class="row">
-                  <div class="col-sm-6 col-md-3 col-lg-3 blog_section">
-                    <div class="blog_wrapper">
-                      <div class="blog_img">
-                        <img class="img img-responsive" src="{% static 'img/blog/group-14@3x.png'%}">
-                        <h4 class="blog_caption" style="text-align: center;"> ¿Cuál es el mejor <br> aceite para cocinar? </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 col-lg-3 blog_section">
-                    <div class="blog_wrapper">
-                      <div class="blog_img">
-                        <img class="img img-responsive" src="{% static 'img/blog/group-15@3x.png'%}">
-                        <h4 class="blog_caption" style="text-align: center;"> La importancia del <br> desayuno </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class=" col-sm-6 col-md-3 col-lg-3 blog_section">
-                    <div class="blog_wrapper">
-                      <div class="blog_img">
-                        <img class="img img-responsive" src="{% static 'img/blog/group-16@3x.png'%}">
-                        <h4 class="blog_caption" style="text-align: center;"> ¡Comer con culpa <br> engorda! </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 col-lg-3 blog_section">
-                    <div class="blog_wrapper">
-                      <div class="blog_img">
-                        <img class="img img-responsive" src="{% static 'img/blog/group-17@3x.png'%}">
-                        <h4 class="blog_caption" style="text-align: center;"> El Omega 3 protege <br> tu corazón </h4>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section> <!-- /section 4 blog_post -->
-
-  <!-- section 5 packages -->
-  <section class="packages myconatiner">
-    <div class="container pack_container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 text-center pack_content">
-            <h1 class="pack_title"> Paquetes de sesiones </h1>
-            <h3 class="sub_heading"> Contamos con diferentes maneras para <br> ayudarte a mejorar tu alimentación </h3>
-              </div>
-              <div class="package_btn">
-            <button class="btn btn-xl-more btn-primary"> <a class="package_session_btn" href="#more" style="color: white;"> Ver paquetes </a> </button>
-          </div>
           </div>
       </div>
   </section>
+  <section class="gray-background">
+      <div class="container custom_container">
+          <div class="flex_container">
+            <div class="titleHome-testimonials">Algunos de nuestros clientes</div>
+          </div>
+          <div class="row flex_container spacing">
+            <div class="client">
+              <div class="thumbnail">
+                <div class="user_img">
+                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-6@3x.png'%}">
+                </div>
+                <div class="caption">
+                  <h2 class="user_name" style="text-align: center;"> Ileana Castro </h2>
+                  <p class="sub_caption special-caption" style="text-align: center;">“Aprendí a comer bien y balanceado, a saber qué es lo que me hace daño  y cómo reemplazarlo por algo igualmente rico pero saludable.”</p>
+                </div>
+              </div>
+            </div>
+            <div class="client">
+              <div class="thumbnail">
+                <div class="user_img">
+                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-5@3x.png'%}">
+                </div>
+                <div class="caption">
+                  <h2 class="user_name" style="text-align: center;"> Carlos Cervantes </h2>
+                  <p class="sub_caption" style="text-align: center;">“La Lic. en Nutrición Alejandra no te entrega un dieta, te ayuda a cambiar tu estilo de vida para mejorar tu salud.”</p>
+                </div>
+              </div>
+            </div>
+            <div class="client">
+              <div class="thumbnail">
+                <div class="user_img">
+                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-7@3x.png'%}">
+                </div>
+                <div class="caption">
+                  <h2 class="user_name" style="text-align: center;"> Yolanda Vargas </h2>
+                  <p class="sub_caption" style="text-align: center;">“Me siento más ligera y alegre, además de que es un plan hecho para mi con la comida que me gusta.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <section class="last-recipes">
+      <div class="row flex_container">
+        <div class="header text-center">
+          <div class="titleHome">Últimas Recetas</div>
+          <div class="sub-header line-height">Conoce las diferentes y fáciles recetas que te puedes hacer en cualquier momento del día</div>
+        </div>
+      </div>
+      <div class="row flex_container">
+        <div class="image-container">
+          <img class="image-recipe" src="{% static 'img/bg-img/food1.png'%}" style="width: 506px; height: 450px;">
+        </div>
+
+        <div class="image-container">
+            <img class="image-recipe" src="{% static 'img/bg-img/chinese3.png'%}" style="width: 506px; height: 450px;">
+        </div>
+
+        <div class="image-container">
+            <img class="image-recipe" src="{% static 'img/bg-img/food2.png'%}" style="width: 506px; height: 450px;">
+        </div>
+      </div>
+      <div class="row flex_container margin-top-button">
+        <a class="link_morebtn" href="{% url 'landing:recetas'%}" style="color: white;"><button class="buttonRecipe">  Ver más </button></a>
+      </div>
+  </section>
+  <div class="row flex_container">
+    <div class="separator"></div>
+  </div>
+  <div class="blogspot-row">
+      <div class="row flex_container">
+        <div class="header text-center">
+          <div class="titleHome">Blogposts destacados</div>
+        </div>
+      </div>
+      <div class="row flex_container margin-bottom-middle">
+        <div class="blog_img">
+          <img class="blog-img" src="{% static 'img/blog/group-14@3x.png'%}">
+          <h4 class="blog_caption" style="text-align: center;"> ¿Cuál es el mejor <br> aceite para cocinar? </h4>
+        </div>
+        <div class="blog_img">
+          <img class="blog-img" src="{% static 'img/blog/group-15@3x.png'%}">
+          <h4 class="blog_caption" style="text-align: center;"> La importancia del <br> desayuno </h4>
+        </div>
+        <div class="blog_img">
+          <img class="blog-img" src="{% static 'img/blog/group-16@3x.png'%}">
+          <h4 class="blog_caption" style="text-align: center;"> ¡Comer con culpa <br> engorda! </h4>
+        </div>
+        <div class="blog_img">
+          <img class="blog-img" src="{% static 'img/blog/group-17@3x.png'%}">
+          <h4 class="blog_caption" style="text-align: center;"> El Omega 3 protege <br> tu corazón </h4>
+        </div>
+      </div>
+  </div>
+  <section class="last-bg-image">
+    <div class="row flex_container">
+      <div class="header text-center">
+        <div class="titleHome last-title">Paquetes de sesiones</div>
+        <div class="sub-header last-width">Contamos con diferentes maneras para ayudarte a mejorar tu alimentación</div>
+      </div>
+    </div>
+    <div class="row flex_container">
+      <a class="link_morebtn" href="{% url 'landing:servicios'%}" style="color: white;"><button class="buttonRecipe">  Ver paquetes </button></a>
+    </div>
+  </section>
+
 {% endblock %}
