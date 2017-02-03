@@ -12,6 +12,9 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.carousel-caption {
+  top: 135px !important;
+}
 .last-bg-image {
   padding-top: 61px !important;
   padding-bottom: 53px !important;
@@ -602,13 +605,17 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   .carousel-inner .carousel-caption .read_more_btn{padding:6px;font-size:13px}
 }
 @media only screen and (min-width:769px) and (max-width:1024px){
-  .carousel-inner .carousel-caption{right:0;bottom:50px}
+  .carousel-caption{right:0;top:100px}
   .carousel-inner .carousel-caption .banner_text{font-size:40px}
   .carousel-inner .carousel-caption .sub_head{font-size:25px;margin:8px 0}
   .carousel-inner .carousel-caption .read_more_btn{padding:6px;font-size:17px}
   .carousel-control .glyphicon{position:relative;top:177px}
   .carousel-control .glyph_left{left:34px}
   .carousel-control .glyph_right{left:-116px}
+  .carousel-inner >.item >img{
+    width: 1024px !important;
+    max-width: none !important;
+  }
 }
 @media only screen and (min-width:1025px) and (max-width:1280px){
   .carousel-inner .carousel-caption{bottom:170px;left:12%}.carousel-inner .carousel-caption .banner_text{font-size:45px}.carousel-inner .carousel-caption .sub_head{font-size:32px}.carousel-inner .carousel-caption .read_more_btn{font-size:18px}
@@ -709,6 +716,31 @@ input.form-control1:focus {
   }
 }
 @media only screen and (max-width:768px) and (max-width:769px) {
+  .carousel-inner >.item >img{
+    width: 1024px !important;
+    max-width: none !important;
+  }
+  .client {
+    margin-bottom: 65px;
+  }
+  .sub-header {
+    width: 300px;
+  }
+  .blog_img {
+    margin-bottom: 25px;
+  }
+  .flex_container {
+    flex-wrap: wrap;
+  }
+  .carousel-control .glyph_right {
+      left: 0px !important;
+  }
+  .carousel-caption {
+    top: 50px !important;
+  }
+  .cerryLogo {
+    position: inherit !important;
+  }
   .navbar .navbar-nav {
     width: 100%;
     text-align: center;
@@ -825,6 +857,9 @@ input.form-control1:focus {
 }
 .bg-footer .left_widget{padding-bottom:60px}}
 @media only screen and (min-width:769px) and (max-width:1024px){
+.carousel-caption {
+  top: 65px !important;
+}
 .bg-footer .container.footer,.bg-footer .right_widget{text-align:left}
 .bg-footer .left_widget{padding-bottom:60px}}h1{font-size:36px}h1,h2,h4,p{color:#4a4a4a}.pack_title,.sub_head,.sub_heading{color:#fff}.testimonials{padding:50px 0 80px}
 .bg-primary{background-color:#f5f5f5}.tm_title{margin-bottom:120px}
