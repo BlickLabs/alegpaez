@@ -65,9 +65,15 @@
                 <li>
                     <a class="page-scroll" href="http://blog.alegpaez.com/" target='_blank'>Blog</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#contacto">Contacto</a>
-                </li>
+								{% if request.path == '/contacto/' %}
+									<li class="select">
+										<a class="page-scroll" href="{% url 'landing:contacto'%}">Contacto</a>
+									</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:contacto'%}">Contacto</a>
+									</li>
+								{% endif %}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

@@ -20,6 +20,14 @@ class AboutTemplateView(TemplateView):
         return context
 
 
+class ContactTemplateView(TemplateView):
+    template_name = 'contacto.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ContactTemplateView, self).get_context_data(**kwargs)
+        return context
+
+
 class ServicesTemplateView(TemplateView):
     template_name = 'servicios.html'
 

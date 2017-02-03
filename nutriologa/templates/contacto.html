@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<!-- section 1 services -->
+<section class="removeBottom">
+    <div class="container custom_container">
+        <div class="row overflow">
+			<!-- section part 1 -->
+            <div class="text-center">
+              <div class="receipts-container">
+                 <div class="contact">Contacto</div>
+              </div>
+            </div>
+
+            <div class="horizontal-row">
+              <div class="group space-group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Nombre(s)</label>
+              </div>
+              <div class="group space-group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Apellido</label>
+              </div>
+            </div>
+            <div class="horizontal-row">
+              <div class="group space-group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Correo electrónico</label>
+              </div>
+              <div class="group space-group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Teléfono (opcional)</label>
+              </div>
+            </div>
+            <div class="horizontal-row add-margin-bottom">
+              <div class="group textarea-group">
+                <textarea required></textarea>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label class="custom-top">Mensaje</label>
+              </div>
+            </div>
+            <div class="horizontal-row add-another-margin-bottom">
+              <p class="custom-message">Selecciona el día en el que te gustaría agendar tu cita (opcional)</p>
+            </div>
+            <div class="horizontal-row add-another-margin-bottom-one">
+              <div class="group textarea-group">
+                <input type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Día, mes.</label>
+              </div>
+            </div>
+            <div class="horizontal-row add-another-margin-bottom-final">
+              <a class="link_morebtn" href="#enviarMessage" style="color: white;"><button class="buttonRecipe">  Enviar Mensaje </button></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

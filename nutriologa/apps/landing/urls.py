@@ -15,6 +15,10 @@ urlpatterns = [
         view=views.VideosTemplateView.as_view(),
         name='videos'),
 
+    url(regex=r'^contacto/$',
+        view=views.ContactTemplateView.as_view(),
+        name='contacto'),
+
     url(regex=r'^recetas/$',
         view=views.RecipesTemplateView.as_view(),
         name='recetas'),
