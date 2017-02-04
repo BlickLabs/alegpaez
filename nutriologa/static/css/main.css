@@ -83,6 +83,9 @@ label 				 {
 }
 
 /* active state */
+textarea:focus ~ label.custom-top, textarea:valid ~ label.custom-top{
+  top:-10px !important;
+}
 input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label{
   top:-10px;
   font-size:14px;
@@ -726,13 +729,25 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
 .navbar .navbar-nav li{float:none;display:inline-block}
 
 @media only screen and (max-width:767px){
-  .navbar-toggle{display:block}.navbar .navbar-header{position:unset}.navbar .navbar-header .navbar-brand{height:auto;padding:0}.navbar .navbar-header .navbar-brand img{display:block;height:55px;margin-left:20px}.navbar .navbar-header .navbar-toggle{float:right;padding:9px 23px;margin-right:22px}.navbar .navbar-nav{margin:0;text-align:left}.navbar .navbar-nav li{display:block;padding:0}
+  .navbar-toggle{display:block}
+  .navbar .navbar-header{position:unset}
+  .navbar .navbar-header .navbar-brand{height:auto;padding:0}
+  .navbar .navbar-header .navbar-brand img{display:block;height:55px;margin-left:20px}
+  .navbar .navbar-header .navbar-toggle{float:right;padding:9px 10px;margin-right:22px;color:white;}
+  .navbar .navbar-header .navbar-toggle:hover{float:right;padding:9px 10px;margin-right:22px;color:white;background: #ED7161;border-color: none !important;}
+  .navbar-default .navbar-toggle {border-color: transparent;}
+  .navbar .navbar-nav{margin:0;text-align:left}
+  .navbar .navbar-nav li{display:block;padding:0}
   .navbar .navbar-nav li a{padding:10px}
   .navbar .collapse.navbar-collapse{margin-top:0}
   .carousel-control .glyphicon{position:relative;top:100px}
   .carousel-control .glyphicon .glyph_l{width:32px;height:28px}
   .carousel-control .glyph_left{left:0}
-  .carousel-control .glyph_right{left:-58px}.carousel-inner .read_more_btn{border:2px solid #fff!important}.carousel-caption.header-content-inner{width:80%}}
+  .carousel-control .glyph_right{left:-58px}.carousel-inner .read_more_btn{border:2px solid #fff!important}.carousel-caption.header-content-inner{width:80%}
+  .navbar .navbar-header .navbar-toggle {
+
+  }
+}
 @media only screen and (max-width:468px){
   .carousel-inner .carousel-caption{right:0;bottom:12px}.carousel-inner .carousel-caption .banner_text{font-size:16px}.carousel-inner .carousel-caption .sub_head{font-size:11px;margin:8px 0}.carousel-inner .carousel-caption .read_more_btn{padding:6px;font-size:9px}
 }
@@ -745,6 +760,9 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   .carousel-inner .carousel-caption .banner_text{font-size:30px}
   .carousel-inner .carousel-caption .sub_head{font-size:18px;margin:8px 0}
   .carousel-inner .carousel-caption .read_more_btn{padding:6px;font-size:13px}
+  .navbar-brand > img {
+    margin-top: -100px;
+  }
 }
 @media only screen and (min-width:769px) and (max-width:1024px){
   .carousel-caption{right:0;top:100px}
@@ -857,10 +875,24 @@ input.form-control1:focus {
     margin-left: 4%;
   }
 }
+
 @media only screen and (max-width:768px) and (max-width:769px) {
+  .change-row {
+    flex-direction: column;
+  }
+  .group {
+    width: 100%;
+  }
+  .space-group {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .carousel-inner >.item >img{
     width: 1024px !important;
     max-width: none !important;
+  }
+  .navbar-brand > img {
+    margin-top: -100px;
   }
   .client {
     margin-bottom: 65px;
@@ -881,7 +913,7 @@ input.form-control1:focus {
     top: 50px !important;
   }
   .cerryLogo {
-    position: inherit !important;
+    top: 15px;
   }
   .navbar .navbar-nav {
     width: 100%;
@@ -963,10 +995,6 @@ input.form-control1:focus {
 .button:hover {
     width: inherit;
 }
-.navbar-brand > img {
-  margin-top: -10px !important;
-  width: auto !important;
-}
 .bg-footer .container.footer,.bg-footer .right_widget{text-align:left}
 .bg-footer .footer_logo{position:absolute;top:-90px}
 .left_container {
@@ -1027,7 +1055,8 @@ input.form-control1:focus {
 .blog_container .blog_img .img.img-responsive{display:inline}
 .blog_title{margin-top:120px;font-family:FuturaStd-Bold}.blog_caption{margin-top:30px;font-family:Colaborate-Medium}
 .packages{background-image:url(/img/bg-img/apple-bg-img.png);background-size:cover}.packages .pack_title{font-family:FuturaStd-Bold}.packages .sub_heading{font-family:Colaborate-Regular}.package_btn{margin-top:80px;float:left;width:100%;font-family:Montserrat-Regular}
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px)
+{
   .gallary,section{padding:50px 0}
   .text-center{margin-bottom:50px}
   h1{font-size:26px}
