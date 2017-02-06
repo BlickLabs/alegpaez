@@ -117,22 +117,21 @@
         </div>
       </div>
       <div class="row flex_container margin-bottom-middle">
-        <div class="blog_img">
-          <img class="blog-img" src="{% static 'img/blog/group-14@3x.png'%}">
-          <h4 class="blog_caption" style="text-align: center;"> ¿Cuál es el mejor <br> aceite para cocinar? </h4>
-        </div>
-        <div class="blog_img">
-          <img class="blog-img" src="{% static 'img/blog/group-15@3x.png'%}">
-          <h4 class="blog_caption" style="text-align: center;"> La importancia del <br> desayuno </h4>
-        </div>
-        <div class="blog_img">
-          <img class="blog-img" src="{% static 'img/blog/group-16@3x.png'%}">
-          <h4 class="blog_caption" style="text-align: center;"> ¡Comer con culpa <br> engorda! </h4>
-        </div>
-        <div class="blog_img">
-          <img class="blog-img" src="{% static 'img/blog/group-17@3x.png'%}">
-          <h4 class="blog_caption" style="text-align: center;"> El Omega 3 protege <br> tu corazón </h4>
-        </div>
+        {% for post in posts %}
+          <div class="blog_img">
+
+            {% for thumbnail in thumbnails %}
+              {{thumbnail.post_id}}
+              {{post.id}}
+              {% if thumbnail.post_id == post.id %}
+                <img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">
+              {% else %}
+                <img src="http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg" alt="">
+              {% endif %}
+            {% endfor %}
+            <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>
+          </div>
+        {% endfor %}
       </div>
   </div>
   <section class="last-bg-image">
