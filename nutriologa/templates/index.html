@@ -121,12 +121,10 @@
           <div class="blog_img">
 
             {% for thumbnail in thumbnails %}
-              {{thumbnail.post_id}}
-              {{post.id}}
               {% if thumbnail.post_id == post.id %}
                 <img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">
               {% else %}
-                <img src="http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg" alt="">
+                <img class="blog-img" src="http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg" alt="">
               {% endif %}
             {% endfor %}
             <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>
