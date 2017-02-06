@@ -39,6 +39,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'suit',
+    "anymail",
 )
 
 # Apps specific for this project go here.
@@ -140,6 +141,17 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'nutriologa',
 }
 
+# ANYMAIL CONFIGURATION
+# -----------------------------------------------------------------------------
+ANYMAIL = {
+    "MAILGUN_API_KEY": env("MAILGUN_API_KEY"),
+    "MAILGUN_SENDER_DOMAIN": env("MAILGUN_SENDER_DOMAIN"),
+}
+
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+
+DEFAULT_EMAIL_TO = env("DEFAULT_EMAIL_TO")
+
 # STATIC CONFIGURATION
 # -----------------------------------------------------------------------------
 STATICFILES_DIRS = (
@@ -154,3 +166,5 @@ STATICFILES_FINDERS = (
 DATABASE_ROUTERS = ['nutriologa.apps.wordpress.router.WordpressRouter']
 
 WORDPRESS_SITE_URL = env('WORDPRESS_SITE_URL')
+
+

@@ -19,3 +19,4 @@ django-suit
 # Your custom requirements go here
 # -----------------------------------------------------------------------------
 mysql-python
+django-anymail[mailgun]
