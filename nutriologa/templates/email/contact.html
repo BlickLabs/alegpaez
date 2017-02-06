@@ -1,0 +1,21 @@
+<p>
+  Nombre del cliente: {{ name }} {{ last_name }}
+</p>
+<p>
+  Correo electronico: {{ email }}
+</p>
+{% if phone %}
+  <p>
+    Telefono: {{ phone }}
+  </p>
+{% endif %}
+{% if message %}
+  <p>
+    Mensaje: {{ message }}
+  </p>
+{% endif %}
+{% if date %}
+  <p>
+    Fecha: {{ date }}
+  </p>
+{% endif %}
