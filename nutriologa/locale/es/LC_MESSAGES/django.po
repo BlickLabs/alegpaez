@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-19 21:36-0600\n"
+"POT-Creation-Date: 2017-02-08 23:08-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: nutriologa/apps/recipes/models.py:12 nutriologa/apps/recipes/models.py:43
+#: nutriologa/apps/recipes/models.py:12 nutriologa/apps/recipes/models.py:47
 msgid "Title"
 msgstr "Titulo"
 
@@ -30,25 +30,33 @@ msgstr "Youtube Link"
 msgid "Youtube video ID"
 msgstr "Youtube video ID"
 
-#: nutriologa/apps/recipes/models.py:33
+#: nutriologa/apps/recipes/models.py:37
 msgid "Video"
 msgstr "Video"
 
-#: nutriologa/apps/recipes/models.py:34
+#: nutriologa/apps/recipes/models.py:38
 msgid "videos"
 msgstr "Videos"
 
-#: nutriologa/apps/recipes/models.py:50
+#: nutriologa/apps/recipes/models.py:54
 msgid "Image"
 msgstr "Imagen"
 
-#: nutriologa/apps/recipes/models.py:57
+#: nutriologa/apps/recipes/models.py:61
 msgid "Description"
 msgstr "Descripción"
 
-#: nutriologa/apps/recipes/models.py:63
+#: nutriologa/apps/recipes/models.py:67
 msgid "Category"
 msgstr "Categoria"
+
+#: nutriologa/apps/recipes/models.py:84
+msgid "Recipe"
+msgstr "Receta"
+
+#: nutriologa/apps/recipes/models.py:85
+msgid "Recipes"
+msgstr "Recetas"
 
 #: nutriologa/core/messages.py:9
 msgid "This field can not be blank"

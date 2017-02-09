@@ -138,7 +138,7 @@ AUTHENTICATION_BACKENDS = (
 # SUIT CONFIGURATION
 # -----------------------------------------------------------------------------
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'nutriologa',
+    'ADMIN_NAME': 'Administrador',
 }
 
 # ANYMAIL CONFIGURATION
