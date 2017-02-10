@@ -15,6 +15,21 @@
 .selectChange {
     height: 70px !important;
 }
+.imagesData {
+  width: 100% !important;
+  height: 500px !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.parallaxEffect {
+  width: 100% !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
 .space-group {
   margin-left: 10px;
   margin-right: 10px;
@@ -305,7 +320,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   color: #9b9b9b;
 }
 .carousel-control .glyph_right {
-  left: -218px;
+  left: -70px;
   top: 210px !important;
 }
 .one{
