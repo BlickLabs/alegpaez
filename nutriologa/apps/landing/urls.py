@@ -19,6 +19,11 @@ urlpatterns = [
         view=views.ContactTemplateView.as_view(),
         name='contacto'),
 
+
+    url(regex=r'^send/$',
+        view=views.ContactView.as_view(),
+        name='email'),
+
     url(regex=r'^recetas/$',
         view=views.RecipesTemplateView.as_view(),
         name='recetas'),
