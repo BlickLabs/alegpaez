@@ -12,6 +12,9 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.selectChange {
+    height: 70px !important;
+}
 .space-group {
   margin-left: 10px;
   margin-right: 10px;

@@ -26,6 +26,15 @@
 						{% else %}
 							<ul class="nav navbar-nav">
 						{% endif %}
+								{% if request.path == '/' %}
+									<li class="select selectChange">
+										<a class="page-scroll" href="{% url 'landing:home'%}">Inicio</a>
+									</li>
+								{% else %}
+									<li>
+										<a class="page-scroll" href="{% url 'landing:home'%}">Inicio</a>
+									</li>
+								{% endif %}
 								{% if request.path == '/recetas/' %}
                 	<li class="select">
 										<a class="page-scroll" href="{% url 'landing:recetas'%}">Recetas</a>
