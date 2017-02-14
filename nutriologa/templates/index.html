@@ -93,14 +93,40 @@
       <div class="row flex_container">
         {% for recipe in recipes%}
           {% if forloop.counter == 3%}
-            <div class="image-container hiddeOnMobil">
+            <div class="image-container hiddeOnMobil" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
               <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
             </div>
           {% else %}
-            <div class="image-container">
+            <div class="image-container" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
               <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
             </div>
           {% endif %}
+          <div class="modal fade" id="recipe-home-{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content recipe-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class='recipeContent'>
+                    <div class="recipt" style="background-image:URL('{{recipe.image.url}}')"></div>
+                    <div class='recipeDescription'>
+                      <div class="description">
+                        <div>{{recipe.description}}</div>
+                      </div>
+                      {% if recipe.category == 'breakfast'%}
+                        <div class="name-receipt breakfast"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
+                      {% elif recipe.category == 'collation' %}
+                        <div class="name-receipt colations"><img class="smallIcon" src="{% static 'img/receipts/colations.png'%}"/>{{recipe.title}}</div>
+                      {% elif recipe.category == 'dinner' %}
+                        <div class="name-receipt dinner"><img class="smallIcon" src="{% static 'img/receipts/snack.png'%}"/>{{recipe.title}}</div>
+                      {% elif recipe.category == 'meal' %}
+                        <div class="name-receipt meats"><img class="smallIcon" src="{% static 'img/receipts/meats.png'%}"/>{{recipe.title}}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         {% endfor %}
       </div>
       <div class="row flex_container margin-top-button">
