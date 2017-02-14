@@ -64,17 +64,14 @@ class ContactView(View):
         msg = EmailMultiAlternatives(
             subject="Notificacion de Contacto",
             body="Repleace with HTML",
-            from_email="Contacto Desde Pagina Web <postmaster@alegpaez.com>",
+            from_email="Contacto Desde Pagina Web <postmaster@mg.alegpaez.com>",
             to=[settings.DEFAULT_EMAIL_TO],
         )
 
         msg.attach_alternative(body, "text/html")
 
-        try:
-            msg.send()
-            response = 'Send'
-        except:
-            response = 'Not Send'
+        msg.send()
+        response = 'Send'
 
         return HttpResponse(response)
 

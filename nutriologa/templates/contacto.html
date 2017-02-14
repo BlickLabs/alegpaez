@@ -9,7 +9,29 @@
 {% block content %}
 
 <!-- section 1 services -->
-<section class="removeBottom">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  $('#contact').submit(function (e) {
+    e.preventDefault();
+    var myform = document.getElementById("contact");
+    var fd = new FormData(myform );
+    $.ajax({
+      url: "/send/",
+      data: fd,
+      cache: false,
+      processData: false,
+      contentType: false,
+      type: 'POST',
+      success: function (result) {
+        // do something with the result
+        event.preventDefault();
+        console.log(result);
+      }
+    });
+    return false;
+  });
+</script>
+<section class="removeBottom reducePaddingInMovil">
     <div class="container custom_container">
         <div class="row overflow">
 			<!-- section part 1 -->
@@ -18,57 +40,58 @@
                  <div class="contact">Contacto</div>
               </div>
             </div>
-
-            <div class="horizontal-row change-row">
-              <div class="group space-group">
-                <input type="text" name="name" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Nombre(s)</label>
+            <form id='contact'>
+              <div class="horizontal-row change-row">
+                <div class="group space-group">
+                  <input type="text" name="name" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Nombre(s)</label>
+                </div>
+                <div class="group space-group">
+                  <input type="text" name="last_name" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Apellido</label>
+                </div>
               </div>
-              <div class="group space-group">
-                <input type="text" name="last_name" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Apellido</label>
+              <div class="horizontal-row change-row">
+                <div class="group space-group">
+                  <input type="text" name="email" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Correo electrónico</label>
+                </div>
+                <div class="group space-group">
+                  <input type="text" name="phone" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Teléfono (opcional)</label>
+                </div>
               </div>
-            </div>
-            <div class="horizontal-row change-row">
-              <div class="group space-group">
-                <input type="text" name="email" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Correo electrónico</label>
+              <div class="horizontal-row add-margin-bottom">
+                <div class="group textarea-group">
+                  <textarea required name="message" rows="2"></textarea>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label class="custom-top">Mensaje</label>
+                </div>
               </div>
-              <div class="group space-group">
-                <input type="text" name="phone" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Teléfono (opcional)</label>
+              <div class="horizontal-row add-another-margin-bottom">
+                <p class="custom-message">Selecciona el día en el que te gustaría agendar tu cita (opcional)</p>
               </div>
-            </div>
-            <div class="horizontal-row add-margin-bottom">
-              <div class="group textarea-group">
-                <textarea required name="message" rows="2"></textarea>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label class="custom-top">Mensaje</label>
+              <div class="horizontal-row add-another-margin-bottom-one">
+                <div class="group textarea-group">
+                  <input type="text" name="date" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Día, mes.</label>
+                </div>
               </div>
-            </div>
-            <div class="horizontal-row add-another-margin-bottom">
-              <p class="custom-message">Selecciona el día en el que te gustaría agendar tu cita (opcional)</p>
-            </div>
-            <div class="horizontal-row add-another-margin-bottom-one">
-              <div class="group textarea-group">
-                <input type="text" name="date" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Día, mes.</label>
+              <div class="horizontal-row add-another-margin-bottom-final">
+                <button type='submit' style="color: white;" class="link_morebtn buttonRecipe">  Enviar Mensaje </button>
               </div>
-            </div>
-            <div class="horizontal-row add-another-margin-bottom-final">
-              <a class="link_morebtn" href="#enviarMessage" style="color: white;"><button class="buttonRecipe">  Enviar Mensaje </button></a>
-            </div>
+            </form>
         </div>
     </div>
 </section>

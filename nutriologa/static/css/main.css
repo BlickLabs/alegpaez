@@ -15,6 +15,13 @@
 .selectChange {
     height: 70px !important;
 }
+.backdrop {
+  width: 100%;
+  height: 50px !important;
+  background-color: rgba(0,0,0,0);
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
+  background-image: linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
+}
 .imagesData {
   width: 100% !important;
   height: 500px !important;
@@ -750,9 +757,24 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   .navbar-toggle{display:block}
   .navbar .navbar-header{position:unset}
   .navbar .navbar-header .navbar-brand{height:auto;padding:0}
-  .navbar .navbar-header .navbar-brand img{display:block;height:55px;margin-left:20px}
-  .navbar .navbar-header .navbar-toggle{float:right;padding:9px 10px;margin-right:22px;color:white;}
-  .navbar .navbar-header .navbar-toggle:hover{float:right;padding:9px 10px;margin-right:22px;color:white;background: #ED7161;border-color: none !important;}
+  .navbar .navbar-header .navbar-toggle{
+    float: right;
+    padding: 17px 10px;
+    margin-right: 26px;
+    color: white;
+    background: #ED7161;
+    border-color: none !important;
+    margin-top: -10px;
+  }
+  .navbar .navbar-header .navbar-toggle:hover{
+    float: right;
+    padding: 17px 10px;
+    margin-right: 26px;
+    color: white;
+    background: #ED7161;
+    border-color: none !important;
+    margin-top: -10px;
+  }
   .navbar-default .navbar-toggle {border-color: transparent;}
   .navbar .navbar-nav{margin:0;text-align:left}
   .navbar .navbar-nav li{display:block;padding:0}
@@ -778,9 +800,6 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   .carousel-inner .carousel-caption .banner_text{font-size:30px}
   .carousel-inner .carousel-caption .sub_head{font-size:18px;margin:8px 0}
   .carousel-inner .carousel-caption .read_more_btn{padding:6px;font-size:13px}
-  .navbar-brand > img {
-    margin-top: -100px;
-  }
 }
 @media only screen and (min-width:769px) and (max-width:1024px){
   .carousel-caption{right:0;top:100px}
@@ -874,6 +893,9 @@ section{padding:81px 0 300px!important}
 input.form-control1:focus {
     outline: 0px solid #ed7161 !important;
 }
+.reducePaddingInMovil {
+  padding: 50px 0 50px !important;
+}
 .bg-footer .form-control1{
   height: 42px;
   padding: 13px 77px 13px 19px;
@@ -910,7 +932,7 @@ input.form-control1:focus {
     max-width: none !important;
   }
   .navbar-brand > img {
-    margin-top: -100px;
+    margin: 74px 0px 0px 40px !important;
   }
   .client {
     margin-bottom: 65px;
@@ -929,9 +951,6 @@ input.form-control1:focus {
   }
   .carousel-caption {
     top: 50px !important;
-  }
-  .cerryLogo {
-    top: 15px;
   }
   .navbar .navbar-nav {
     width: 100%;
@@ -1003,13 +1022,17 @@ input.form-control1:focus {
     padding: 5px!important;
 }
 .button {
-  width: inherit;
-  margin-top: 10px;
+  width: inherit !important;
+  margin-top: 10px !important;
+}
+.inMobilCenterTitle {
+  margin-top: -140px;
 }
 .container-menu {
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
 }
+
 .button:hover {
     width: inherit;
 }
@@ -1039,9 +1062,12 @@ input.form-control1:focus {
     justify-content: center;
     align-items: center;
 }
-.logo_img {
-  width: 160px !important;
-  margin-top: -16px;
+.footerAdjustImage {
+  margin-top: 170px;
+  width: 135px !important;
+}
+.reducePaddingInMovil {
+  padding: 50px 0 50px !important;
 }
 .bg-footer .left_widget{padding-bottom:60px}}
 @media only screen and (min-width:769px) and (max-width:1024px){

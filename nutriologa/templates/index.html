@@ -6,7 +6,7 @@
   {% include "partials/carrousel.html" %}
 {% endblock %}
 {% block content %}
-  <section class="small-images">
+  <section class="small-images reducePaddingInMovil">
       <div class="container custom_container">
           <div class="row flex_container">
               <div class="text-center">
@@ -41,7 +41,7 @@
           </div>
       </div>
   </section>
-  <section class="gray-background">
+  <section class="gray-background reducePaddingInMovil">
       <div class="container custom_container">
           <div class="flex_container">
             <div class="titleHome-testimonials">Algunos de nuestros clientes</div>
@@ -69,7 +69,7 @@
                 </div>
               </div>
             </div>
-            <div class="client">
+            <div class="client hiddeOnMobil">
               <div class="thumbnail">
                 <div class="user_img">
                   <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-7@3x.png'%}">
@@ -83,7 +83,7 @@
           </div>
       </div>
   </section>
-  <section class="last-recipes">
+  <section class="last-recipes reducePaddingInMovil">
       <div class="row flex_container">
         <div class="header text-center">
           <div class="titleHome">Últimas Recetas</div>
@@ -99,7 +99,7 @@
             <img class="image-recipe" src="{% static 'img/bg-img/chinese3.png'%}" style="width: 506px; height: 450px;">
         </div>
 
-        <div class="image-container">
+        <div class="image-container hiddeOnMobil">
             <img class="image-recipe" src="{% static 'img/bg-img/food2.png'%}" style="width: 506px; height: 450px;">
         </div>
       </div>
@@ -110,7 +110,7 @@
   <div class="row flex_container">
     <div class="separator"></div>
   </div>
-  <div class="blogspot-row">
+  <div class="blogspot-row reducePaddingInMovil">
       <div class="row flex_container">
         <div class="header text-center">
           <div class="titleHome">Blogposts destacados</div>
@@ -132,7 +132,7 @@
         {% endfor %}
       </div>
   </div>
-  <section class="last-bg-image parallaxEffect">
+  <section class="last-bg-image parallaxEffect reducePaddingInMovil">
     <div class="row flex_container">
       <div class="header text-center">
         <div class="titleHome last-title">Paquetes de sesiones</div>
