@@ -11,8 +11,7 @@
 <!-- section 1 services -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-  $('#contact').submit(function (e) {
-    e.preventDefault();
+  function sendEmail() {
     var myform = document.getElementById("contact");
     var fd = new FormData(myform );
     $.ajax({
@@ -25,12 +24,18 @@
       success: function (result) {
         // do something with the result
         event.preventDefault();
-        console.log(result);
+        if (result === "Send") {
+          document.getElementById("contact").reset();
+          document.querySelector('#notifications').text = 'Tu mensaje se envio correctamente';
+        } else {
+          document.querySelector('#notifications').text = 'Ha sucedido un error, vuelve a intertarlo en unos momentos';
+        }
+        document.querySelector('#notifications').open();
       }
     });
-    return false;
-  });
+  }
 </script>
+<paper-toast id='notifications'></paper-toast>
 <section class="removeBottom reducePaddingInMovil">
     <div class="container custom_container">
         <div class="row overflow">
@@ -40,7 +45,7 @@
                  <div class="contact">Contacto</div>
               </div>
             </div>
-            <form id='contact'>
+            <form id='contact' onsubmit="sendEmail(); return false;">
               <div class="horizontal-row change-row">
                 <div class="group space-group">
                   <input type="text" name="name" required>
