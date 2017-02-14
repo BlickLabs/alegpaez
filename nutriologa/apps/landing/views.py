@@ -115,6 +115,7 @@ class HomeTemplateView(TemplateView):
         context = super(HomeTemplateView, self).get_context_data(**kwargs)
         thumbnails = []
         posts = WpPosts.objects.filter(post_status='publish')[:5]
+        recipes = Recipe.objects.all().order_by('-date')[:3]
         metas = WpPostmeta.objects.all()
         for post in posts:
             for meta in metas:
@@ -123,6 +124,7 @@ class HomeTemplateView(TemplateView):
                     thumb = WpPostmeta.objects.get(post_id=thumbnail_id, meta_key='_wp_attached_file')
                     thumbnails.append(Thumbnail(post.id, thumb.meta_value))
         context['posts'] = posts
+        context['recipes'] = recipes
         context['thumbnails'] = thumbnails
         context['metas'] = metas
         return context

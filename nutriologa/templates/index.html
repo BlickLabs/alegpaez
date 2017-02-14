@@ -91,17 +91,17 @@
         </div>
       </div>
       <div class="row flex_container">
-        <div class="image-container">
-          <img class="image-recipe" src="{% static 'img/bg-img/food1.png'%}" style="width: 506px; height: 450px;">
-        </div>
-
-        <div class="image-container">
-            <img class="image-recipe" src="{% static 'img/bg-img/chinese3.png'%}" style="width: 506px; height: 450px;">
-        </div>
-
-        <div class="image-container hiddeOnMobil">
-            <img class="image-recipe" src="{% static 'img/bg-img/food2.png'%}" style="width: 506px; height: 450px;">
-        </div>
+        {% for recipe in recipes%}
+          {% if forloop.counter == 3%}
+            <div class="image-container hiddeOnMobil">
+              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
+            </div>
+          {% else %}
+            <div class="image-container">
+              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
       <div class="row flex_container margin-top-button">
         <a class="link_morebtn" href="{% url 'landing:recetas'%}" style="color: white;"><button class="buttonRecipe">  Ver más </button></a>
