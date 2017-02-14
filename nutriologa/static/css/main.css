@@ -83,10 +83,11 @@
 
 input,textarea 				{
   font-size:18px;
-  padding:10px 10px 19px 25px;
+  margin: 11px 0px 0px 0px !important;
   display:block;
   width:100%;
   border:none;
+  padding-top: 16px;
   border-bottom:1px solid #e5e5e5;
 }
 input:focus,textarea:focus 		{ outline:none; }
@@ -101,13 +102,16 @@ label 				 {
   pointer-events:none;
   left:5px;
   top:10px;
-  padding-left: 21px;
+  margin-left: -6px;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
 }
 
 /* active state */
+textarea {
+  margin: 16px 0px 0px 0px !important;
+}
 textarea:focus ~ label.custom-top, textarea:valid ~ label.custom-top{
   top:-10px !important;
 }
