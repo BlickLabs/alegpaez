@@ -21,7 +21,7 @@
                    {% for video in videos%}
                      <div class="miniclip" data-toggle="modal" data-target="#videos-{{forloop.counter}}">
                        <div class="arrow" style="background-image:URL('https://img.youtube.com/vi/{{video.youtube_video_id}}/0.jpg')">
-                         <img class="play" data-attribute='{{video.youtube_video_url}}' src="{% static 'img/videos/page-1.png' %}"/>
+                         <img class="play" data-attribute='{{video.youtube_video_url}}' src="{% static 'img/icons/play.svg' %}"/>
                        </div>
                        <div class="name-clip">{{video.title}}</div>
                      </div>

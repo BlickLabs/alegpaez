@@ -15,6 +15,12 @@
 .selectChange {
     height: 70px !important;
 }
+.closeImageStyle:focus {
+  outline: none;
+}
+button.close:focus {
+  outline: none;
+}
 .name-receipt {
   text-align: center;
 }
