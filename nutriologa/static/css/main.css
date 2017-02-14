@@ -634,7 +634,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   top: -72px;
 }
 .recipeDescription {
-  width: 46% !important;
+  width: 46%;
 }
 .close {
     font-size: 60px;
@@ -934,6 +934,43 @@ input.form-control1:focus {
     flex-direction: column;
   }
   .group {
+    width: 100%;
+  }
+  .modal-lg, .video-content, .modal-video {
+    width: 100%;
+  }
+  .description {
+    margin-top: 40px;
+  }
+  .recipeContent > .recipt {
+    width: 100% !important;
+    height: 201px!important;
+  }
+  .video-content {
+    margin-top: 50px;
+  }
+  .backgroundDialogVideo {
+    background: white;
+  }
+  button.videoCloseModal {
+    z-index: 5;
+    position: absolute !important;
+    top: -50px;
+  }
+  .modal-dialog {
+    margin:0px;
+  }
+  .recipe-content {
+    height: 100%;
+  }
+  .recipeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+  }
+  .recipeDescription {
     width: 100%;
   }
   .space-group {
