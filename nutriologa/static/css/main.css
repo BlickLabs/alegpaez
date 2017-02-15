@@ -535,7 +535,6 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
 }
 .font-Size {
   font-size: 18px;
-  padding-left: 10px;
 }
 .second {
   padding-top: 54px;
@@ -549,7 +548,6 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   padding-bottom: 25px;
 }
 .principalTitle {
-  padding-left: 10px;
   line-height: 2px;
   font-size: 18px;
   font-family: FuturaStd-Bold;
