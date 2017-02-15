@@ -826,6 +826,9 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   font-family: FuturaStd-Medium;
 }
 .navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
+.mobilLogoAdjust {
+  top: -70px;
+}
 .navbar .navbar-header .navbar-brand img{
   width:173px;
   position: absolute;
@@ -914,7 +917,12 @@ input.form-control1:focus {
   }
 }
 
-h1{font-size:36px}h1,h2,h4,p{color:#4a4a4a}.pack_title,.sub_head,.sub_heading{color:#fff}.testimonials{padding:50px 0 80px}
+@media only screen and (min-width:769px) and (max-width:1024px){
+.carousel-caption {
+  top: 65px !important;
+}
+.bg-footer .container.footer,.bg-footer .right_widget{text-align:left}
+.bg-footer .left_widget{padding-bottom:60px}}h1{font-size:36px}h1,h2,h4,p{color:#4a4a4a}.pack_title,.sub_head,.sub_heading{color:#fff}.testimonials{padding:50px 0 80px}
 .bg-primary{background-color:#f5f5f5}.tm_title{margin-bottom:120px}
 .thumbnail {
   height: inherit !important;
@@ -941,6 +949,9 @@ h1{font-size:36px}h1,h2,h4,p{color:#4a4a4a}.pack_title,.sub_head,.sub_heading{co
 
 
 @media only screen and (max-width: 767px) {
+    body {
+        background-color: lightblue;
+    }
     .navbar .navbar-header .navbar-brand img{
       width:173px;
       position: absolute;

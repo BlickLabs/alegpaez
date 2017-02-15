@@ -190,7 +190,6 @@
   }
   .logo_img {
     width: 160px !important;
-    margin-top: -16px;
   }
   .hiddeOnMobil {
     display: none;
@@ -206,9 +205,7 @@
     font-family: FuturaStd-Medium;
   }
   .navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
-  .navbar .navbar-header .navbar-brand img{
-    top: -70px;
-  }.navbar .navbar .collapse.navbar-collapse{margin-top:0!important}
+  .navbar .navbar .collapse.navbar-collapse{margin-top:0!important}
   .navbar-nav > li > a {
     line-height: 26px !important;
 
