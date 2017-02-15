@@ -35,6 +35,16 @@
     .reducePaddingInMovil {
       padding: 50px 0 50px !important;
     }
+    .list {
+      justify-content: initial;
+    }
+    .margin-left-one {
+      padding-left: 51px !important;
+    }
+    .list > p {
+      line-height: 24px;
+      width: 100%;
+    }
     .footerAdjustImage {
       margin-top: 170px;
       width: 135px !important;
@@ -76,11 +86,6 @@
     }
     .cerryLogo {
       top: 15px;
-    }
-    .navbar .navbar-nav {
-      width: 100%;
-      text-align: center;
-      height: auto;
     }
     .overflow {
       overflow: auto;
@@ -202,13 +207,7 @@
   }
   .navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
   .navbar .navbar-header .navbar-brand img{
-    width:173px;
-    position: absolute;
-    margin: 0 auto;
     top: -70px;
-    left: 0;
-    right: 0;
-    z-index: 1;
   }.navbar .navbar .collapse.navbar-collapse{margin-top:0!important}
   .navbar-nav > li > a {
     line-height: 26px !important;
