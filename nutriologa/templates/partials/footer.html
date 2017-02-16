@@ -1,5 +1,31 @@
 {% load static from staticfiles %}
 <!-- footer -->
+<script>
+  function sendNewsletterEmail() {
+    var myform = document.getElementById("newsLetter");
+    var fd = new FormData(myform );
+    $.ajax({
+      url: "/newsletter/",
+      data: fd,
+      cache: false,
+      processData: false,
+      contentType: false,
+      type: 'POST',
+      success: function (result) {
+        // do something with the result
+        event.preventDefault();
+        if (result === "subscribed") {
+          document.getElementById("newsLetter").reset();
+          document.querySelector('#notifications').text = 'Listo, espera las últimas noticias';
+        } else {
+          document.querySelector('#notifications').text = 'Ha sucedido un error, vuelve a intertarlo en unos momentos';
+        }
+        document.querySelector('#notifications').open();
+      }
+    });
+  }
+</script>
+<paper-toast id='notifications'></paper-toast>
 <footer class="bg-footer myconatiner reducePaddingInMovil">
 	<div class="footer_logo">
 		<img class="logo_img footerAdjustImage" src="{% static 'img/footer-img/group-20@3x.png'%}">
@@ -22,13 +48,10 @@
 					<p class="subscribe"> Suscríbete a nuestro Newsletter </p>
 				</div>
 				<div class="footer_form">
-					<form class="form footer_form">
+					<form class="form footer_form" onsubmit="sendNewsletterEmail(); return false;" id='newsLetter'>
 						<div class="input_text">
-							<input type="form_sub" class="form-control1" id="correo" placeholder="Correo electrónico">
+							<input required type="form_sub" class="form-control1" id="correo" placeholder="Correo electrónico">
 						</div>
-						<!-- <div class="input_btn">
-					    	<button type="submit" class="btn btn-default btn-xl-subs"> Suscribirme </button>
-					    </div> -->
 					</form>
 				</div>
 			</div>
