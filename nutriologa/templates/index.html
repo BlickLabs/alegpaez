@@ -93,12 +93,12 @@
       <div class="row flex_container">
         {% for recipe in recipes%}
           {% if forloop.counter == 3%}
-            <div class="image-container hiddeOnMobil" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
-              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
+            <div class="pointer image-container hiddeOnMobil" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
+              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;object-fit: cover;">
             </div>
           {% else %}
-            <div class="image-container" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
-              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;">
+            <div class="pointer image-container" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
+              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;object-fit: cover;">
             </div>
           {% endif %}
           <div class="modal fade" id="recipe-home-{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -144,7 +144,7 @@
       </div>
       <div class="row flex_container margin-bottom-middle">
         {% for post in posts %}
-          <div class="blog_img">
+          <div class="blog_img pointer">
 
             {% for thumbnail in thumbnails %}
               {% if thumbnail.post_id == post.id %}

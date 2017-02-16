@@ -59,7 +59,7 @@
             <div class="text-center sectionPadding">
               <div class="wrap">
                 {% for recipe in recipes%}
-                  <div class="receip-content" data-toggle="modal" data-target="#myModal-{{forloop.counter}}">
+                  <div class="receip-content pointer" data-toggle="modal" data-target="#myModal-{{forloop.counter}}">
                     <div class="recipt" style="background-image:URL('{{recipe.image.url}}')">
                     </div>
                     {% if recipe.category == 'breakfast'%}

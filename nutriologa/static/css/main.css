@@ -18,6 +18,9 @@
 .closeImageStyle:focus {
   outline: none;
 }
+.pointer {
+  cursor: pointer;
+}
 button.close:focus {
   outline: none;
 }
