@@ -145,7 +145,6 @@
       <div class="row flex_container margin-bottom-middle">
         {% for post in posts %}
           <div class="blog_img pointer">
-
             {% for thumbnail in thumbnails %}
               {% if thumbnail.post_id == post.id %}
                 <img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">
@@ -155,6 +154,7 @@
             {% endfor %}
             <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>
           </div>
+          <a href="{% settings_value "WORDPRESS_SITE_URL" %}{{ post.link }}">Link</a>
         {% endfor %}
       </div>
   </div>

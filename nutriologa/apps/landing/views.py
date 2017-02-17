@@ -1,13 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*
+import json
+import requests
+
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.template import loader
 from django.utils.decorators import method_decorator
+from django.utils.text import slugify
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView
 from django.views.generic import TemplateView
 from django.views.generic import View
 from django.core.mail import EmailMultiAlternatives
+import urlparse
 
 from django.conf import settings
 from nutriologa.apps.wordpress.models import WpPosts, WpPostmeta
@@ -117,7 +123,16 @@ class HomeTemplateView(TemplateView):
         posts = WpPosts.objects.filter(post_status='publish')[:5]
         recipes = Recipe.objects.all().order_by('-date')[:3]
         metas = WpPostmeta.objects.all()
+        from datetime import datetime
         for post in posts:
+            wp_date = post.post_date
+            date_object = str(wp_date.date()).replace('-', '/')
+            print date_object
+            slug = slugify(post.post_title)
+            print slug
+            url = '%s/%s/' % (date_object, slug )
+            print url
+            post.link = url
             for meta in metas:
                 if meta.post_id == post.id and meta.meta_key == '_thumbnail_id':
                     thumbnail_id = meta.meta_value
