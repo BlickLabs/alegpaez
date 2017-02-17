@@ -36,4 +36,8 @@ urlpatterns = [
         view=views.ServicesTemplateView.as_view(),
         name='servicios'),
 
+    url(regex=r'^newsletter/$',
+        view=views.NewsletterView.as_view(),
+        name='newsletter'),
+
 ]

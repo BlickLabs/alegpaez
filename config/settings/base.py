@@ -40,6 +40,7 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     'suit',
     "anymail",
+    'corsheaders',
 )
 
 # Apps specific for this project go here.
@@ -166,5 +167,12 @@ STATICFILES_FINDERS = (
 DATABASE_ROUTERS = ['nutriologa.apps.wordpress.router.WordpressRouter']
 
 WORDPRESS_SITE_URL = env('WORDPRESS_SITE_URL')
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+MAILCHIMP_API_KEY = env("MAILCHIMP_API_KEY")
+MAILCHIMP_SHARD = env("MAILCHIMP_SHARD")
+MAILCHIMP_API_ROOT = "https://" + MAILCHIMP_SHARD + ".api.mailchimp.com/3.0/"
+NEWSLETTER_LIST_ID = env("NEWSLETTER_LIST_ID")
 
 

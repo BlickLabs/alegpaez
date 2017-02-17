@@ -128,3 +128,26 @@ class HomeTemplateView(TemplateView):
         context['thumbnails'] = thumbnails
         context['metas'] = metas
         return context
+
+
+class NewsletterView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super(NewsletterView, self)\
+            .dispatch(request, *args, **kwargs)
+
+    @staticmethod
+    def post(request):
+        email = request.POST.get('email')
+        list_id = settings.NEWSLETTER_LIST_ID
+        endpoint = urlparse.urljoin(
+            settings.MAILCHIMP_API_ROOT, 'lists/%s/members/' % list_id
+        )
+        data = {
+            "email_address": email,
+            "status": "subscribed",
+        }
+        data = json.dumps(data)
+        response = requests.post(
+            endpoint, auth=('apikey', settings.MAILCHIMP_API_KEY), data=data)
+        return JsonResponse(response.json())
