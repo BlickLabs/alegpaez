@@ -20,3 +20,5 @@ django-suit
 # -----------------------------------------------------------------------------
 mysql-python
 django-anymail[mailgun]
+requests==2.9.1
+django-cors-headers
