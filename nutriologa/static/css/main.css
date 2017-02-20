@@ -44,6 +44,7 @@ button.close:focus {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  background-size: 100%;
 }
 .parallaxEffect {
   width: 100% !important;
@@ -51,6 +52,7 @@ button.close:focus {
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  background-size: 100%;
 }
 .space-group {
   margin-left: 10px;
@@ -1221,6 +1223,9 @@ input.form-control1:focus {
       margin-top: 170px;
       width: 135px !important;
     }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: #ed7161;
+    }
     .reducePaddingInMovil {
       padding: 50px 0 50px !important;
     }
@@ -1231,7 +1236,8 @@ input.form-control1:focus {
     .mobilLogoAdjust {
       top: 3px !important;
       margin: 0 !important;
-      left: 74px !important;
+      left: 30px !important;
+      right: none !important;
     }
 }
 @media only screen and (max-width: 553px) {
