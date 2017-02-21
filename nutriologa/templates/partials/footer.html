@@ -14,11 +14,15 @@
       success: function (result) {
         // do something with the result
         event.preventDefault();
-        if (result === "subscribed") {
+        if (result.status === "subscribed") {
           document.getElementById("newsLetter").reset();
           document.querySelector('#notifications').text = 'Listo, espera las últimas noticias';
         } else {
-          document.querySelector('#notifications').text = 'Ha sucedido un error, vuelve a intertarlo en unos momentos';
+          if (result.title === "Member Exists") {
+            document.querySelector('#notifications').text = 'El correo ya existe, intenta con otro';
+          } else {
+            document.querySelector('#notifications').text = 'El correo no es válido, intenta con otro';
+          }
         }
         document.querySelector('#notifications').open();
       }
