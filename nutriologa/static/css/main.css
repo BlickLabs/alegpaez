@@ -697,7 +697,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   font-size: 16px;
   display: flex;
   font-family: Montserrat-Regular;
-  text-align: justify;
+  text-align: left;
   padding-right: 41px;
   justify-content: space-between;
 }

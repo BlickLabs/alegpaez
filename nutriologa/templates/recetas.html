@@ -11,9 +11,23 @@
 <!-- section 1 services -->
 <section class="reducePaddingInMovil">
     <script>
+      function loadModal(a) {
+        var modal = $('#myModal-' + a);
+        modal.addClass('slideInLeft');
+        setTimeout(function () {
+          modal.modal();
+        }, 10);
+      }
       function next(a) {
-        $('#myModal-' + a).modal('hide');
-        $('#myModal-' + (a + 1)).modal('show');
+        var modal = $('#myModal-' + a);
+        modal.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function( evt ) {
+          modal.modal('hide');
+          modal.removeClass('slideOutRight');
+          modal.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
+          $('#myModal-' + (a + 1)).addClass('slideInLeft');
+          $('#myModal-' + (a + 1)).modal('show');
+        });
+        modal.removeClass('slideInLeft').addClass('slideOutRight');
       };
     </script>
     <div class="container custom_container">
@@ -59,7 +73,7 @@
             <div class="text-center sectionPadding">
               <div class="wrap">
                 {% for recipe in recipes%}
-                  <div class="receip-content pointer" data-toggle="modal" data-target="#myModal-{{forloop.counter}}">
+                  <div class="receip-content pointer" onclick="loadModal({{forloop.counter}})">
                     <div class="recipt" style="background-image:URL('{{recipe.image.url}}')">
                     </div>
                     {% if recipe.category == 'breakfast'%}
@@ -82,7 +96,7 @@
                             <div class='recipeDescription'>
                               <div class="description">
                                 <div>{{recipe.description}}</div>
-                                <div><img onclick="next({{forloop.counter}})" class="glyph_l" src="{% static 'img/icons/path-2.svg' %}" /></div>
+                                <div><img onclick="next({{forloop.counter}})" class="glyph_l pointer" src="{% static 'img/icons/path-2.svg' %}" /></div>
                               </div>
                               {% if recipe.category == 'breakfast'%}
                               	<div class="name-receipt breakfast"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
