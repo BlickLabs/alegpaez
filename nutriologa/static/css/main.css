@@ -15,6 +15,7 @@
 .fixedChanged {
   height: 87px;
 }
+
 .addTopPaddding {
   padding: 137px 0 50px !important;
 }
@@ -839,6 +840,7 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
 .title{
   font-size:22px!important;color:#4a4a4a;margin-bottom:53px;
   font-family: FuturaStd-Medium;
+  margin-top: 2px;
 }
 .navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
 .mobilLogoAdjust {
