@@ -12,6 +12,15 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.fixedChanged {
+  height: 87px;
+}
+.addTopPaddding {
+  padding: 137px 0 50px !important;
+}
+.show {
+  display: none;
+}
 .selectChange {
     height: 70px !important;
 }
@@ -284,7 +293,6 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
 }
 .small-images {
   padding-top: 112px !important;
-  padding-bottom: 73px !important;
 }
 .last-title {
   color: white !important;
@@ -297,6 +305,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
 .blog-img {
   width: 182px !important;
   height: 182px !important;
+  background-size: cover !important;
 }
 .spacing {
   margin-top: 74px;
