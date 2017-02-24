@@ -6,7 +6,7 @@
   {% include "partials/carrousel.html" %}
 {% endblock %}
 {% block content %}
-  <section class="small-images reducePaddingInMovil">
+  <section class="small-images reducePaddingInMovil" id='principal'>
       <div class="container custom_container">
           <div class="row flex_container">
               <div class="text-center">
@@ -148,9 +148,10 @@
             <div class="blog_img pointer">
               {% for thumbnail in thumbnails %}
                 {% if thumbnail.post_id == post.id %}
-                  <img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">
+                  <div class="blog-img" style='background: URL({% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }})'></div>
+                  <!--<img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">-->
                 {% else %}
-                  <img class="blog-img" src="http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg" alt="">
+                  <div class="blog-img" style='background: URL(http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg)'></div>
                 {% endif %}
               {% endfor %}
               <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>

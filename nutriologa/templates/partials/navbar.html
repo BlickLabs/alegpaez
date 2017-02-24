@@ -1,5 +1,5 @@
 {% load static from staticfiles %}
-<nav id="mainNav" class="navbar navbar-default myconatiner">
+<nav id="mainNav" class="navbar navbar-default myconatiner navbar-fixed-top">
 	<!-- homepage navbar -->
 	<div class="container nav_container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -11,7 +11,7 @@
             <div class="cherry_wrapper">
             	<a class="navbar-brand page-scroll" href="{% url 'landing:home' %}">
 								{% if request.path == '/' %}
-									<img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}" class="mobilLogoAdjust">
+									<img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}" class="mobilLogoAdjust" id='removePosition'>
 								{% else %}
 									<img src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}">
 								{% endif %}
@@ -22,7 +22,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						{% if request.path == '/' %}
-							<ul class="nav navbar-nav marginCustomTop">
+							<ul class="nav navbar-nav marginCustomTop" id='fixedAction'>
 						{% else %}
 							<ul class="nav navbar-nav">
 						{% endif %}

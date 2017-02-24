@@ -26,9 +26,47 @@
       {% block carrousell %}{% endblock %}
       {% include 'partials/navbar.html' %}
       <main>
+        <div class="fixedChanged" id='positionPadding'>EnriqueLC</div>
         {% block content %}{% endblock %}
       </main>
       {% include 'partials/footer.html' %}
     </div>
+    <script>
+    	var last_known_scroll_position = 0;
+    	var ticking = false;
+    	//navbar-fixed-top
+    	function doSomething(scroll_pos) {
+    		if (window.location.pathname === '/') {
+    			if (scroll_pos > 478) {
+    				document.querySelector('#mainNav').classList.add('navbar-fixed-top');
+    				document.querySelector('#positionPadding').style.display = 'inline';
+            document.querySelector('#principal').classList.add('addTopPaddding');
+            document.querySelector('#principal').classList.remove('reducePaddingInMovil');
+            document.querySelector('#fixedAction').classList.remove('marginCustomTop');
+            document.querySelector('.select').classList.remove('selectChange');
+            document.querySelector('#removePosition').classList.remove('mobilLogoAdjust');
+    			} else {
+    				document.querySelector('#mainNav').classList.remove('navbar-fixed-top');
+    				document.querySelector('#positionPadding').style.display = 'none';
+            document.querySelector('#principal').classList.remove('addTopPaddding');
+            document.querySelector('#principal').classList.add('reducePaddingInMovil');
+            document.querySelector('#fixedAction').classList.add('marginCustomTop');
+            document.querySelector('.select').classList.add('selectChange');
+            document.querySelector('#removePosition').classList.add('mobilLogoAdjust');
+    			}
+    		}
+    	}
+    	doSomething();
+    	window.addEventListener('scroll', function(e) {
+    		last_known_scroll_position = window.scrollY;
+    		if (!ticking) {
+    			window.requestAnimationFrame(function() {
+    				doSomething(last_known_scroll_position);
+    				ticking = false;
+    			});
+    		}
+    		ticking = true;
+    	});
+    </script>
   </body>
 </html>
