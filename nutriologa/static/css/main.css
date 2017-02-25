@@ -994,6 +994,12 @@ input.form-control1:focus {
     .last-width {
       width: 293px !important;
     }
+    .miniclip {
+      height: 265px;
+    }
+    .receip-content {
+      height: 334px;
+    }
     .reducePaddingInMovil {
       padding: 50px 0 50px !important;
     }

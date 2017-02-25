@@ -102,7 +102,7 @@
     .addMarginBottom {
       margin-bottom: 125px;
     }
-    
+
     .images {
       margin: 0 auto;
     }
@@ -209,16 +209,6 @@
   .navbar-nav > li > a {
     line-height: 26px !important;
 
-  }
-  .miniclip{
-    height:335px;
-    padding-left: 16.6px;
-    padding-right: 16.6px;
-  }
-  .receip-content{
-      height:368px;
-      padding-left: 17.5px;
-      padding-right: 17.5px;
   }
   .select{height:87px;border-bottom:4px solid #f7c42a}
   .arrow{
