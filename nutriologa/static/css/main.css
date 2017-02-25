@@ -983,6 +983,10 @@ input.form-control1:focus {
       font-size: 23px !important;
       margin: 0px 0 14px 0px !important;
     }
+    .container-menu {
+      align-items: center;
+    }
+
     .navbar .navbar-header .navbar-brand img{
       width:173px;
       position: absolute;
@@ -1233,7 +1237,6 @@ input.form-control1:focus {
         padding: 5px!important;
     }
     .button {
-      width: inherit !important;
       margin-top: 10px !important;
     }
     .inMobilCenterTitle {
