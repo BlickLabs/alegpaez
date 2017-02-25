@@ -1236,6 +1236,16 @@ input.form-control1:focus {
     .navbar .navbar-nav li a {
         padding: 5px!important;
     }
+    .blog_img, .blog-img {
+      width: 250px !important;
+      height: 250px !important;
+    }
+    .blog_img > h4{
+      width: auto !important;
+    }
+    .blog_caption {
+      margin-top:10px !important;
+    }
     .button {
       margin-top: 10px !important;
     }
