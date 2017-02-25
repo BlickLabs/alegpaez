@@ -85,9 +85,6 @@
     .carousel-control .glyph_right {
         left: 0px !important;
     }
-    .carousel-caption {
-      top: 50px !important;
-    }
     .cerryLogo {
       top: 15px;
     }
@@ -105,7 +102,7 @@
     .addMarginBottom {
       margin-bottom: 125px;
     }
-
+    
     .images {
       margin: 0 auto;
     }
@@ -199,7 +196,6 @@
     display: none;
   }
   .bg-footer .left_widget{padding-bottom:60px}
-    .carousel-inner .carousel-caption{top: 93px;left:12%}
     .carousel-inner .carousel-caption .banner_text{font-size:62px}.carousel-inner .carousel-caption .sub_head{font-size:36px}.carousel-inner .carousel-caption .read_more_btn{font-size:18px}
     .carousel-control .glyphicon{position:relative;top:308px}}
     .navbar-header{position:absolute;left:0!important;right:0!important;margin:25px auto 0!important;bottom:0!important;float:none!important;top:6px!important}
