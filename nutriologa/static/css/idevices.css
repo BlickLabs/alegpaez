@@ -39,6 +39,42 @@
     .reducePaddingInMovil {
       padding: 50px 0 50px !important;
     }
+    .miniContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .serviceContainer {
+      flex-direction: column;
+    }
+    .square {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0px;
+      border: none !important;
+    }
+    .gray-container {
+      background: white !important;
+    }
+    .package-container {
+      align-items: center;
+    }
+    .package {
+      padding-top: 32px;
+      background: #f5f5f5;
+      border: solid 1px #e5e5e5;
+    }
+    .mini-square {
+      background: #f5f5f5;
+      border: none;
+    }
+    .square > img {
+      padding-left: 0;
+    }
+    .listSpecial, .serviceContainer {
+      margin-top: 0px !important;
+      border: none;
+    }
     .list {
       justify-content: initial;
     }
@@ -96,7 +132,7 @@
     }
 
     .package {
-      width: 100%;
+      width: 50%;
       margin-bottom: 25px;
     }
     .addMarginBottom {
@@ -331,6 +367,7 @@
       text-align: center;
       margin-left: 30px;
     }
+
 }
 
 /* Portrait */

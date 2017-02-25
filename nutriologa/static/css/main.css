@@ -22,6 +22,10 @@
 .show {
   display: none;
 }
+.margin-left-one {
+  margin-left: 27px;
+}
+
 .selectChange {
     height: 70px !important;
 }
@@ -525,9 +529,6 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   background: #ed7161;
   margin-right: 27px;
 }
-.margin-left-one {
-  margin-left: 27px;
-}
 .margin-right-one {
   margin-right: 27px;
 }
@@ -1006,9 +1007,6 @@ input.form-control1:focus {
     .list {
       justify-content: initial;
     }
-    .margin-left-one {
-      padding-left: 51px !important;
-    }
     .list > p {
       line-height: 24px;
       width: 100%;
@@ -1052,7 +1050,12 @@ input.form-control1:focus {
     }
     .square > img {
       padding-right: 10px;
+      padding-left: 0px;
     }
+    .serviceContainer {
+      margin-top: 0 !important;
+    }
+
     .modal-lg, .video-content, .modal-video {
       width: 100%;
     }
@@ -1084,6 +1087,24 @@ input.form-control1:focus {
       margin-left: 0px;
       width: 100%;
       height: initial !important;
+      margin-top: 0 !important;
+      border: none;
+    }
+    .gray-container {
+      background: white !important;
+    }
+
+    .package {
+      padding-top: 32px;
+      background: #f5f5f5;
+      border: solid 1px #e5e5e5;
+    }
+    .mini-square {
+      background: #f5f5f5;
+      border: none;
+    }
+    .removeRightData {
+      padding-right: 5px !important;
     }
     .description {
       margin-top: 40px;
