@@ -46,6 +46,12 @@ button.close:focus {
 }
 .name-receipt {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.close {
+  z-index: 1;
 }
 .backdrop {
   top: 0;
@@ -642,8 +648,13 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
     padding: 0px !important;
     border-bottom: 0px !important;
 }
+img.glyph_l.pointer.slick-arrow {
+    position: absolute;
+    top: 45%;
+    right: 27px;
+}
 .recipeContent {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
