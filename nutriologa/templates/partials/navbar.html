@@ -1,11 +1,34 @@
 {% load static from staticfiles %}
+<script>
+function slide() {
+	if (document.querySelector('#hamburgerMenu').classList.contains('showMenu')) {
+		document.querySelector('#hamburgerMenu').classList.add('slideOutRight');
+		document.querySelector('#hamburgerMenu').classList.remove('slideInRight');
+		setTimeout(function () {
+			document.querySelector('#hamburgerMenuIcon').classList.add('hiddeOnWeb');
+			document.querySelector('#imgMenu').classList.add('hiddeOnWeb');
+			document.querySelector('#principalHeader').classList.remove('hiddeInMobil');
+			document.querySelector('#hamburgerMenu').classList.remove('showMenu');
+			document.querySelector('#mainNav').classList.remove('customHamburgerStyle');
+		}, 500);
+	} else {
+
+		document.querySelector('#principalHeader').classList.add('hiddeInMobil');
+		document.querySelector('#hamburgerMenu').classList.add('slideInRight');
+		document.querySelector('#hamburgerMenu').classList.add('showMenu');
+		document.querySelector('#hamburgerMenu').classList.remove('slideOutRight');
+		document.querySelector('#mainNav').classList.add('customHamburgerStyle');
+		document.querySelector('#hamburgerMenuIcon').classList.remove('hiddeOnWeb');
+		document.querySelector('#imgMenu').classList.remove('hiddeOnWeb');
+	}
+}
+</script>
 <nav id="mainNav" class="navbar navbar-default myconatiner navbar-fixed-top">
 	<!-- homepage navbar -->
 	<div class="container nav_container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            	data-target="#bs-example-navbar-collapse-1">
+        <div class="navbar-header" id="principalHeader">
+            <button type="button" class="navbar-toggle collapsed" onclick="slide()">
                 <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
             </button>
             <div class="cherry_wrapper">
@@ -20,12 +43,17 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="hamburger animated" id="hamburgerMenu">
 						{% if request.path == '/' %}
 							<ul class="nav navbar-nav marginCustomTop" id='fixedAction'>
 						{% else %}
 							<ul class="nav navbar-nav">
 						{% endif %}
+									<li class="hamburgerMenuIcon hiddeOnWeb" id="hamburgerMenuIcon">
+										<a class="" onclick="slide()">
+												<span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+										</a>
+									</li>
 								{% if request.path == '/' %}
 									<li class="select selectChange">
 										<a class="page-scroll" href="{% url 'landing:home'%}">Inicio</a>
@@ -83,6 +111,9 @@
 										<a class="page-scroll" href="{% url 'landing:contacto'%}">Contacto</a>
 									</li>
 								{% endif %}
+								<li class="hiddeOnWeb" id="imgMenu">
+									<img class="miniImage" src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}">
+								</li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

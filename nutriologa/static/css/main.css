@@ -16,9 +16,14 @@
   height: 87px;
 }
 
+.hiddeOnWeb {
+  display: none !important;
+}
+
 .addTopPaddding {
   padding: 137px 0 50px !important;
 }
+.select{height:87px;border-bottom:4px solid #f7c42a}
 .show {
   display: none;
 }
@@ -27,7 +32,7 @@
 }
 
 .selectChange {
-    height: 70px !important;
+    height: 87px !important;
 }
 .carousel-caption {
   display: flex;
@@ -659,9 +664,6 @@ img.glyph_l.pointer.slick-arrow {
   justify-content: space-around;
   align-items: flex-end;
 }
-.marginCustomTop > li{
-  margin-top: 17px;
-}
 .cerryLogo {
   position: absolute;
   left: 0;
@@ -825,7 +827,7 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   }
   .navbar-default .navbar-toggle {border-color: transparent;}
   .navbar .navbar-nav{margin:0;text-align:left}
-  .navbar .navbar-nav li{display:block;padding:0}
+  .navbar .navbar-nav li{display:block;padding:0;padding-right: 45px;}
   .navbar .navbar-nav li a{padding:10px}
   .navbar .collapse.navbar-collapse{margin-top:0}
   .carousel-control .glyphicon{position:relative;top:100px}
@@ -859,7 +861,6 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
   font-family: FuturaStd-Medium;
   margin-top: 2px;
 }
-.navbar .navbar-nav li a{color:#fff!important;font-size:1.2em!important;padding:24px 12px!important}
 .mobilLogoAdjust {
   top: -70px;
 }
@@ -885,7 +886,6 @@ a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,stron
     padding-left: 17.5px;
     padding-right: 17.5px;
 }
-.select{height:87px;border-bottom:4px solid #f7c42a}
 .arrow{
     width: 399px;
     height: 196px;
@@ -980,343 +980,390 @@ input.form-control1:focus {
 
 
 @media only screen and (max-width: 767px) {
-    .banner_text {
-      font-size: 41px !important;
-      line-height: 38px !important;
-    }
-    .custom-height {
-      margin-top: 0px !important;
-    }
-    .service-box {
-      margin-bottom: 35px !important;
-    }
-    .sub_head {
-      font-size: 23px !important;
-      margin: 0px 0 14px 0px !important;
-    }
-    .container-menu {
-      align-items: center;
-    }
+  .hamburger {
+    position: absolute;
+    right: 0;
+    width: 75%;
+    background: #ed7161;
+    display: none;
+    z-index: 4;
+    margin-top: -3px;
+    -webkit-animation-duration: 0.5s;
+  }
+  .select {
+    height: 30px !important;
+  }
+  .hamburger >  ul {
+    margin-top: 10% !important;
+    margin-bottom: 30% !important;
+  }
+  .hamburger > ul >li > a {
+    padding: 3px 0px 0px 3px !important;
+    text-align: right !important;
+    padding-right: 10px;
+  }
+  .customHamburgerStyle {
+    background: transparent !important;
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+  }
+  .hiddeInMobil {
+    display: none;
+  }
+  .select {
+    border-bottom: none !important;
+    border-right: 4px solid #f7c42a !important;
+  }
+  .showMenu {
+    display: inline !important;
+    height: 1000px;
+  }
+  .banner_text {
+    font-size: 41px !important;
+    line-height: 38px !important;
+  }
+  .custom-height {
+    margin-top: 0px !important;
+  }
+  .service-box {
+    margin-bottom: 35px !important;
+  }
+  .sub_head {
+    font-size: 23px !important;
+    margin: 0px 0 14px 0px !important;
+  }
+  .container-menu {
+    align-items: center;
+  }
 
-    .navbar .navbar-header .navbar-brand img{
-      width:173px;
-      position: absolute;
-      margin: 0 auto;
-      top: 6px;
-      left: 0;
-      right: 0;
-      z-index: 1;
-    }
-    .last-width {
-      width: 293px !important;
-    }
-    .miniclip {
-      height: 265px;
-    }
-    .receip-content {
-      height: 334px;
-    }
-    .reducePaddingInMovil {
-      padding: 50px 0 50px !important;
-    }
-    .list {
-      justify-content: initial;
-    }
-    .list > p {
-      line-height: 24px;
-      width: 100%;
-    }
-    .footerAdjustImage {
-      margin-top: 170px;
-      width: 135px !important;
-    }
-    .change-row {
-      flex-direction: column;
-    }
-    .group {
-      width: 100%;
-    }
-    .space-group {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .carousel-inner >.item >img{
-      width: 1024px !important;
-      max-width: none !important;
-    }
-    .change-row {
-      flex-direction: column;
-    }
-    .miniContainer {
-      width: 100%;
-    }
-    .list {
-      justify-content: initial;
-    }
-    .list > p {
-      line-height: 15px;
-      width: 100%;
-    }
-    .group {
-      width: 100%;
-    }
-    .column {
-      padding-left: 16px;
-    }
-    .square > img {
-      padding-right: 10px;
-      padding-left: 0px;
-    }
-    .serviceContainer {
-      margin-top: 0 !important;
-    }
+  .navbar .navbar-header .navbar-brand img{
+    width:145px;
+    position: absolute;
+    margin: 0 auto;
+    top: 9px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .last-width {
+    width: 293px !important;
+  }
+  .miniclip {
+    height: 265px;
+  }
+  .receip-content {
+    height: 334px;
+  }
+  .reducePaddingInMovil {
+    padding: 50px 0 50px !important;
+  }
+  .list {
+    justify-content: initial;
+  }
+  .list > p {
+    line-height: 24px;
+    width: 100%;
+  }
+  .footerAdjustImage {
+    margin-top: 170px;
+    width: 135px !important;
+  }
+  .change-row {
+    flex-direction: column;
+  }
+  .group {
+    width: 100%;
+  }
+  .space-group {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .carousel-inner >.item >img{
+    width: 1024px !important;
+    max-width: none !important;
+  }
+  .change-row {
+    flex-direction: column;
+  }
+  .miniContainer {
+    width: 100%;
+  }
+  .list {
+    justify-content: initial;
+  }
+  .list > p {
+    line-height: 15px;
+    width: 100%;
+  }
+  .group {
+    width: 100%;
+  }
+  .column {
+    padding-left: 16px;
+  }
+  .square > img {
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+  .serviceContainer {
+    margin-top: 0 !important;
+  }
 
-    .modal-lg, .video-content, .modal-video {
-      width: 100%;
-    }
-    .listSpecial > .list {
-      margin-bottom: 0px;
-    }
-    .listSpecial > .list > p {
-      width: 100% !important;
-    }
-    .principalContainer {
-      flex-direction: column!important;
-    }
-    .container {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    .square {
-      justify-content: center;
-    }
-    .color-one ,.color-two{
-      width: 100%;
-      margin-left: 0px;
-    }
-    .margin-right-one {
-      margin-right: 0px;
-      width: 100%;
-    }
-    .margin-left-one {
-      margin-left: 0px;
-      width: 100%;
-      height: initial !important;
-      margin-top: 0 !important;
-      border: none;
-    }
-    .gray-container {
-      background: white !important;
-    }
+  .modal-lg, .video-content, .modal-video {
+    width: 100%;
+  }
+  .listSpecial > .list {
+    margin-bottom: 0px;
+  }
+  .listSpecial > .list > p {
+    width: 100% !important;
+  }
+  .principalContainer {
+    flex-direction: column!important;
+  }
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .square {
+    justify-content: center;
+  }
+  .color-one ,.color-two{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .margin-right-one {
+    margin-right: 0px;
+    width: 100%;
+  }
+  .margin-left-one {
+    margin-left: 0px;
+    width: 100%;
+    height: initial !important;
+    margin-top: 0 !important;
+    border: none;
+  }
+  .gray-container {
+    background: white !important;
+  }
 
-    .package {
-      padding-top: 32px;
-      background: #f5f5f5;
-      border: solid 1px #e5e5e5;
-    }
-    .mini-square {
-      background: #f5f5f5;
-      border: none;
-    }
-    .removeRightData {
-      padding-right: 5px !important;
-    }
-    .description {
-      margin-top: 40px;
-    }
-    .recipeContent > .recipt {
-      width: 100% !important;
-      height: 201px!important;
-    }
-    .video-content {
-      margin-top: 50px;
-    }
-    .backgroundDialogVideo {
-      background: white;
-    }
-    button.videoCloseModal {
-      z-index: 5;
-      position: absolute !important;
-      top: -50px;
-    }
-    .modal-dialog {
-      margin:0px;
-    }
-    .recipe-content {
-      height: 100%;
-    }
-    .recipeContent {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 75px;
-    }
-    .recipeDescription {
-      width: 100%;
-    }
-    .space-group {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .carousel-inner >.item >img{
-      width: 1024px !important;
-      max-width: none !important;
-    }
-    .client {
-      margin-bottom: 65px;
-    }
-    .sub-header {
-      width: 300px;
-    }
-    .blog_img {
-      margin-bottom: 25px;
-    }
-    .flex_container {
-      flex-wrap: wrap;
-    }
-    .carousel-control .glyph_right {
-        left: 0px !important;
-    }
-    .navbar .navbar-nav {
+  .package {
+    padding-top: 32px;
+    background: #f5f5f5;
+    border: solid 1px #e5e5e5;
+  }
+  .mini-square {
+    background: #f5f5f5;
+    border: none;
+  }
+  .removeRightData {
+    padding-right: 5px !important;
+  }
+  .description {
+    margin-top: 40px;
+  }
+  .recipeContent > .recipt {
+    width: 100% !important;
+    height: 201px!important;
+  }
+  .video-content {
+    margin-top: 50px;
+  }
+  .backgroundDialogVideo {
+    background: white;
+  }
+  button.videoCloseModal {
+    z-index: 5;
+    position: absolute !important;
+    top: -50px;
+  }
+  .modal-dialog {
+    margin:0px;
+  }
+  .recipe-content {
+    height: 100%;
+  }
+  .recipeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+  }
+  .recipeDescription {
+    width: 100%;
+  }
+  .space-group {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .carousel-inner >.item >img{
+    width: 1024px !important;
+    max-width: none !important;
+  }
+  .client {
+    margin-bottom: 65px;
+  }
+  .sub-header {
+    width: 300px;
+  }
+  .blog_img {
+    margin-bottom: 25px;
+  }
+  .flex_container {
+    flex-wrap: wrap;
+  }
+  .carousel-control .glyph_right {
+      left: 0px !important;
+  }
+  .navbar .navbar-nav {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+  .overflow {
+    overflow: auto;
+  }
+  .mini-square {
+    width: 100%;
+  }
+
+  .package {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .addMarginBottom {
+    margin-bottom: 125px;
+  }
+
+  .images {
+    margin: 0 auto;
+  }
+  .notShow {
+    display: none;
+  }
+  .lastSection {
+    padding-bottom: 100px;
+  }
+
+  .package-container {
+    flex-direction: column;
+  }
+  .sectionTwo {
+    display: flex;
+    flex-direction: column;
+    line-height: 17px;
+    margin: 0px auto 0px auto;
+    font-size: 17px;
+    width: auto;
+    font-family: FuturaStd-Medium;
+    color: #4a4a4a;
+    padding-top: 59px;
+    padding-left: 0px;
+    padding-right: 27px;
+    padding-bottom: 33px;
+    justify-content: center;
+  }
+  .parallaxContain {
+    line-height: 16px;
+    margin: -46px auto 0px auto;
+    border: solid 1px #e5e5e5;
+    background: white;
+    font-size: 16px;
+    text-align: initial;
+    width: auto;
+    font-family: FuturaStd-Medium;
+    color: #4a4a4a;
+    padding-top: 41px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 33px;
+  }
+  .select {
+    height: auto;
+  }
+  .blog_img, .blog-img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .blog_img > h4{
+    width: auto !important;
+  }
+  .blog_caption {
+    margin-top:10px !important;
+  }
+  .button {
+    margin-top: 10px !important;
+  }
+  .inMobilCenterTitle {
+    margin-top: -140px;
+  }
+  .container-menu {
+      -ms-flex-direction: column !important;
+      flex-direction: column !important;
+  }
+
+  .button:hover {
+      width: inherit;
+  }
+  .bg-footer .container.footer,.bg-footer .right_widget{text-align:left}
+  .bg-footer .footer_logo{position:absolute;top:-90px}
+  .left_container {
       width: 100%;
       text-align: center;
-      height: auto;
-    }
-    .overflow {
-      overflow: auto;
-    }
-    .mini-square {
-      width: 100%;
-    }
-
-    .package {
-      width: 100%;
-      margin-bottom: 25px;
-    }
-    .addMarginBottom {
-      margin-bottom: 125px;
-    }
-
-    .images {
-      margin: 0 auto;
-    }
-    .notShow {
-      display: none;
-    }
-    .lastSection {
-      padding-bottom: 100px;
-    }
-
-    .package-container {
-      flex-direction: column;
-    }
-    .sectionTwo {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 34px !important;
+  }
+  .custom-row {
       display: flex;
       flex-direction: column;
-      line-height: 17px;
-      margin: 0px auto 0px auto;
-      font-size: 17px;
-      width: auto;
-      font-family: FuturaStd-Medium;
-      color: #4a4a4a;
-      padding-top: 59px;
-      padding-left: 0px;
-      padding-right: 27px;
-      padding-bottom: 33px;
+      margin-left: 0px;
+  }
+  .center_container {
+      margin-top: 10px;
+  }
+  .right_container {
+      margin-left: 0px;
+      padding-top: 9px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-    }
-    .parallaxContain {
-      line-height: 16px;
-      margin: -46px auto 0px auto;
-      border: solid 1px #e5e5e5;
-      background: white;
-      font-size: 16px;
-      text-align: initial;
-      width: auto;
-      font-family: FuturaStd-Medium;
-      color: #4a4a4a;
-      padding-top: 41px;
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 33px;
-    }
-    .select {
-      height: auto;
-    }
-    .navbar .navbar-nav li a {
-        padding: 5px!important;
-    }
-    .blog_img, .blog-img {
-      width: 250px !important;
-      height: 250px !important;
-    }
-    .blog_img > h4{
-      width: auto !important;
-    }
-    .blog_caption {
-      margin-top:10px !important;
-    }
-    .button {
-      margin-top: 10px !important;
-    }
-    .inMobilCenterTitle {
-      margin-top: -140px;
-    }
-    .container-menu {
-        -ms-flex-direction: column !important;
-        flex-direction: column !important;
-    }
+      align-items: center;
+  }
+  .footerAdjustImage {
+    margin-top: 170px;
+    width: 135px !important;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #ed7161;
+  }
+  .reducePaddingInMovil {
+    padding: 50px 0 50px !important;
+  }
+  .bg-footer .left_widget{padding-bottom:60px}
+  .hiddeOnMobil {
+    display: none;
+  }
 
-    .button:hover {
-        width: inherit;
-    }
-    .bg-footer .container.footer,.bg-footer .right_widget{text-align:left}
-    .bg-footer .footer_logo{position:absolute;top:-90px}
-    .left_container {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        padding-top: 34px !important;
-    }
-    .custom-row {
-        display: flex;
-        flex-direction: column;
-        margin-left: 0px;
-    }
-    .center_container {
-        margin-top: 10px;
-    }
-    .right_container {
-        margin-left: 0px;
-        padding-top: 9px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .footerAdjustImage {
-      margin-top: 170px;
-      width: 135px !important;
-    }
-    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-        border-color: #ed7161;
-    }
-    .reducePaddingInMovil {
-      padding: 50px 0 50px !important;
-    }
-    .bg-footer .left_widget{padding-bottom:60px}
-    .hiddeOnMobil {
-      display: none;
-    }
-    .mobilLogoAdjust {
-      top: 3px !important;
-      margin: 0 !important;
-      left: 30px !important;
-      right: none !important;
-    }
+  .mobilLogoAdjust {
+    top: 3px !important;
+    margin: 0 !important;
+    left: 30px !important;
+    right: none !important;
+  }
+  .hamburgerMenuIcon {
+    margin-bottom: 10px;
+  }
+  .miniImage {
+    width: 130px;
+    float: right;
+    margin-top: 20px;
+}
+
 }
 @media only screen and (max-width: 553px) {
   .hiddeOnMobil {
