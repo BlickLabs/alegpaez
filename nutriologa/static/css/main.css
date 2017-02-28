@@ -989,6 +989,8 @@ input.form-control1:focus {
     z-index: 4;
     margin-top: -3px;
     -webkit-animation-duration: 0.5s;
+    transition:0.5s ease all;
+    -moz-transition:0.5s ease all;
   }
   .select {
     height: 30px !important;
@@ -1003,10 +1005,10 @@ input.form-control1:focus {
     padding-right: 10px;
   }
   .customHamburgerStyle {
-    background: transparent !important;
+    z-index: 4;
     position: fixed;
     top: 0;
-    height: 0;
+    height: 79px;
     width: 100%;
   }
   .hiddeInMobil {
