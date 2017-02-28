@@ -1,8 +1,12 @@
 {% load static from staticfiles %}
 <!-- footer -->
 <script>
-  function sendNewsletterEmail() {
-    var myform = document.getElementById("newsLetter");
+  function sendNewsletterEmail(params) {
+    if (params) {
+      var myform = document.getElementById("newsLetterWordpress");
+    } else{
+      var myform = document.getElementById("newsLetter");
+    }
     var fd = new FormData(myform );
     $.ajax({
       url: "/newsletter/",
