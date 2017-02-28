@@ -1360,6 +1360,10 @@ input.form-control1:focus {
   .hamburgerMenuIcon {
     margin-bottom: 10px;
   }
+  #contact {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
   .miniImage {
     width: 130px;
     float: right;
