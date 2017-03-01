@@ -12,6 +12,43 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.verticalHouse {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  height: 474px !important;
+  margin-left: 10%;
+  width: 80%;
+}
+.read_more_btn {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 0;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.read_more_btn:hover {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 0;
+  font-family: Montserrat-Regular;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.sub_head {
+  font-size: 36px;
+  font-family: FuturaStd-Medium;
+}
+.banner_text {
+  color: white !important;
+}
+.up {
+  z-index: 4;
+}
 .fixedChanged {
   height: 77px;
 }
@@ -654,9 +691,11 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
     border-bottom: 0px !important;
 }
 img.glyph_l.pointer.slick-arrow {
-    position: absolute;
-    top: 45%;
-    right: 27px;
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  right: 10%;
 }
 .recipeContent {
   display: flex !important;
