@@ -29,6 +29,7 @@
   text-decoration: none;
   color: white;
   text-align: center;
+  margin-top: 2%;
 }
 .read_more_btn:hover {
   background-color: transparent;
@@ -42,8 +43,7 @@
 .sub_head {
   font-size: 36px;
   font-family: FuturaStd-Medium;
-  margin-top: 18px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 .banner_text {
   color: white !important;
