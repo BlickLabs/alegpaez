@@ -31,6 +31,13 @@
   text-align: center;
   margin-top: 2%;
 }
+.marginCustomTop {
+    margin-bottom: -10px !important;
+    margin-top: 12px;
+}
+.marginCustomTop > .select {
+  height: 77px !important;
+}
 .read_more_btn:hover {
   background-color: transparent;
   border: 3px solid #fff;
@@ -42,7 +49,7 @@
 }
 .sub_head {
   font-size: 36px;
-  font-family: FuturaStd-Medium;
+  font-family: Colaborate-Medium;
   margin-top: 20px;
 }
 .banner_text {
@@ -687,6 +694,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
     border-radius: 0px !important;
     box-shadow: none !important;
     padding: 0px !important;
+    border: none;
 }
 .modal-header {
     padding: 0px !important;
@@ -1021,6 +1029,9 @@ input.form-control1:focus {
 
 
 @media only screen and (max-width: 767px) {
+  .image-recipe {
+    width: 100% !important;
+  }
   .hamburger {
     position: absolute;
     right: 0;
@@ -1253,7 +1264,7 @@ input.form-control1:focus {
     width: 300px;
   }
   .blog_img {
-    margin-bottom: 25px;
+    margin-bottom: 25%;
   }
   .flex_container {
     flex-wrap: wrap;
