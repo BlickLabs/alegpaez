@@ -42,6 +42,8 @@
 .sub_head {
   font-size: 36px;
   font-family: FuturaStd-Medium;
+  margin-top: 18px;
+  margin-bottom: 30px;
 }
 .banner_text {
   color: white !important;
@@ -1402,6 +1404,12 @@ input.form-control1:focus {
   #contact {
     padding-right: 25px;
     padding-left: 25px;
+  }
+  .verticalHouse {
+    width: 70%;
+  }
+  img.glyph_l.pointer.slick-arrow {
+    right: 5%;
   }
   .miniImage {
     width: 130px;
