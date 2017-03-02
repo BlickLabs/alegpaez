@@ -2,33 +2,27 @@
 <!-- footer -->
 <script>
   function sendNewsletterEmail(params) {
-    var url = "/newsletter/";
-    if (params) {
-      var myform = document.getElementById("newsLetterWordpress");
-      url = "http://alegpaez.com/newsletter/";
-    } else{
-      var myform = document.getElementById("newsLetter");
+    var url = "/newsletter/",
+      myform = document.getElementById("correo");
 
-    }
-    var fd = new FormData(myform );
+    url = "http://alegpaez.com/newsletter/";
     $.ajax({
       url: url,
-      data: fd,
+      data: {email:myform.value},
       type: 'POST',
       success: function (result) {
         // do something with the result
         event.preventDefault();
         if (result.status === "subscribed") {
           document.getElementById("newsLetter").reset();
-          document.querySelector('#notifications').text = 'Listo, espera las últimas noticias';
+          noty({text: 'Listo, espera las últimas noticias'});
         } else {
           if (result.title === "Member Exists") {
-            document.querySelector('#notifications').text = 'El correo ya existe, intenta con otro';
+            noty({text: 'El correo ya existe, intenta con otro'});
           } else {
-            document.querySelector('#notifications').text = 'El correo no es válido, intenta con otro';
+            noty({text: 'El correo no es válido, intenta con otro'});
           }
         }
-        document.querySelector('#notifications').open();
       }
     });
   }
