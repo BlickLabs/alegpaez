@@ -1,5 +1,33 @@
 {% load static from staticfiles %}
 <script>
+$(document).ready(function() {
+	$("body").click(function(event) {
+    // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
+		console.log(event, event.target);
+     /*if ($("#mainNav").hasClass('customHamburgerStyle')) {
+        $('.navbar-toggle').click()
+    }*/
+		if (event.target.tagName === 'I') {
+			slide();
+		} else {
+			if (event.target.tagName !== 'NAV' && !event.target.classList.contains('hamburger'))
+			close();
+		}
+  });
+});
+function close () {
+	if (document.querySelector('#hamburgerMenu').classList.contains('showMenu')) {
+		document.querySelector('#hamburgerMenu').classList.add('slideOutRight');
+		document.querySelector('#hamburgerMenu').classList.remove('slideInRight');
+		setTimeout(function () {
+			document.querySelector('#hamburgerMenuIcon').classList.add('hiddeOnWeb');
+			document.querySelector('#imgMenu').classList.add('hiddeOnWeb');
+			document.querySelector('#principalHeader').classList.remove('hiddeInMobil');
+			document.querySelector('#hamburgerMenu').classList.remove('showMenu');
+			document.querySelector('#mainNav').classList.remove('customHamburgerStyle');
+		}, 500);
+	}
+}
 function slide() {
 	if (document.querySelector('#hamburgerMenu').classList.contains('showMenu')) {
 		document.querySelector('#hamburgerMenu').classList.add('slideOutRight');
@@ -28,7 +56,7 @@ function slide() {
 	<div class="container nav_container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header" id="principalHeader">
-            <button type="button" class="navbar-toggle collapsed" onclick="slide()">
+            <button type="button" class="navbar-toggle collapsed" onclick="">
                 <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
             </button>
             <div class="cherry_wrapper">
@@ -112,7 +140,7 @@ function slide() {
 									</li>
 								{% endif %}
 								<li class="hiddeOnWeb" id="imgMenu">
-									<img class="miniImage" src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}">
+									<a href="{% url 'landing:home' %}"><img class="miniImage" src="{% static 'img/logo/logo-alegpaez-06@3x.png'%}"></a>
 								</li>
             </ul>
         </div><!-- /.navbar-collapse -->
