@@ -1449,6 +1449,9 @@ input.form-control1:focus {
   .receipts-container {
     margin-top: 0px;
   }
+  .forceRemoveHeight {
+    margin-top: -40px !important;
+  }
   .miniImage {
     width: 130px;
     float: right;
