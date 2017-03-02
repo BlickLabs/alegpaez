@@ -2,11 +2,6 @@
 <script>
 $(document).ready(function() {
 	$("body").click(function(event) {
-    // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
-		console.log(event, event.target);
-     /*if ($("#mainNav").hasClass('customHamburgerStyle')) {
-        $('.navbar-toggle').click()
-    }*/
 		if (event.target.tagName === 'I') {
 			slide();
 		} else {
