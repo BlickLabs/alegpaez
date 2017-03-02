@@ -12,6 +12,9 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.carrousel-slick-arrow {
+  width: 30px !important;
+}
 .recipes-arrow {
   right: 35px !important;
   top: 50%;
