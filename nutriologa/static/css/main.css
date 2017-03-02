@@ -12,6 +12,11 @@
 .sectionWithoutPadding {
   padding: 0px !important;
 }
+.recipes-arrow {
+  right: 35px !important;
+  top: 50%;
+
+}
 .verticalHouse {
   display: flex !important;
   flex-direction: column !important;
@@ -762,14 +767,15 @@ img.glyph_l.pointer.slick-arrow {
   text-decoration: none !important;
 }
 .description {
-  margin-bottom: 50%;
   padding-left: 41px;
   font-size: 16px;
+  flex-direction: row;
   display: flex;
   font-family: Montserrat-Regular;
   text-align: left;
-  padding-right: 41px;
-  justify-content: space-between;
+  padding-right: 100px;
+  justify-content: space-around;
+  height: 250px;
 }
 .description > div > img {
   padding-left: 19px;
@@ -1419,7 +1425,7 @@ input.form-control1:focus {
   .verticalHouse {
     width: 70%;
   }
-  img.glyph_l.pointer.slick-arrow {
+  .pointer.slick-arrow-main {
     right: 5%;
   }
   .miniImage {

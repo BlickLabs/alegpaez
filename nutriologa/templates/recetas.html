@@ -13,9 +13,7 @@
       function loadModal(a) {
         var modal = $('#myModal-' + a);
         modal.addClass('slideInLeft');
-        setTimeout(function () {
-          modal.modal();
-        }, 10);
+        modal.modal();
         $('.recipe-slick-content').slick('refresh');
       }
       $(document).ready(function(){
@@ -24,7 +22,7 @@
           arrows: true,
           prevArrow: '',
           lazyLoad: 'ondemand',
-          nextArrow: '<img class="glyph_l pointer" src="{% static 'img/icons/path-2.svg' %}" />'
+          nextArrow: '<img class="glyph_l pointer recipes-arrow" src="{% static 'img/icons/path-2.svg' %}" />'
         });
       });
     </script>
