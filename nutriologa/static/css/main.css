@@ -708,8 +708,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
 img.glyph_l.pointer.slick-arrow {
   position: absolute;
   top: 45%;
-  width: 40px;
-  height: 40px;
+  width: 15px;
   right: 10%;
 }
 .recipeContent {
@@ -771,11 +770,11 @@ img.glyph_l.pointer.slick-arrow {
   font-size: 16px;
   flex-direction: row;
   display: flex;
-  font-family: Montserrat-Regular;
+  font-family: FuturaStd-Medium;
   text-align: left;
-  padding-right: 100px;
+  padding-right: 70px;
   justify-content: space-around;
-  height: 250px;
+  height: 260px;
 }
 .description > div > img {
   padding-left: 19px;
@@ -1427,6 +1426,10 @@ input.form-control1:focus {
   }
   .pointer.slick-arrow-main {
     right: 5%;
+  }
+  .recipes-arrow {
+      right: 35px !important;
+      top: 55% !important;
   }
   .miniImage {
     width: 130px;
