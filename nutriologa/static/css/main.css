@@ -488,7 +488,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   justify-content: center;
 }
 .buttonRecipe {
-  width: 168px;
+  width: 212px;
   height: 54px;
   background-color: #ed7161;
   border: 0px;
