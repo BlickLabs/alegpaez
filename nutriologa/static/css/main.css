@@ -1222,6 +1222,7 @@ input.form-control1:focus {
   }
   .description {
     margin-top: 40px;
+    height: 9em !important;
   }
   .recipeContent > .recipt {
     width: 100% !important;
@@ -1429,7 +1430,10 @@ input.form-control1:focus {
   }
   .recipes-arrow {
       right: 35px !important;
-      top: 55% !important;
+      top: 66% !important;
+  }
+  .marginCustomTop > .select {
+      height: 27px !important;
   }
   .miniImage {
     width: 130px;
