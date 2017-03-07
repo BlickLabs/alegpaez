@@ -99,7 +99,9 @@
                               <div class="recipt" style="background-image:URL('{{recipe.image.url}}')"></div>
                               <div class='recipeDescription'>
                                 <div class="description">
-                                  {{recipe.description}}
+                                    {% autoescape off %}
+                                      {{recipe.description}}
+                                    {% endautoescape %}
                                 </div>
                                 {% if recipe.category == 'breakfast'%}
                                   <div class="name-receipt breakfast" style="width: 372px;position:absolute;bottom:0;"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
