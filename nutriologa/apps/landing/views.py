@@ -133,6 +133,10 @@ class HomeTemplateView(TemplateView):
         thumbnails = []
         posts = WpPosts.objects.filter(post_status='publish')[:4]
         recipes = Recipe.objects.all().order_by('-date')[:3]
+        for recipe in recipes:
+            description = recipe.description.replace('\n', '<br>')
+            recipe.description = description
+
         metas = WpPostmeta.objects.all()
         for post in posts:
             wp_date = post.post_date
