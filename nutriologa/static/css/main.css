@@ -67,7 +67,7 @@
   z-index: 4;
 }
 .fixedChanged {
-  height: 77px;
+  height: 83px;
 }
 
 .hiddeOnWeb {
@@ -209,7 +209,13 @@ label 				 {
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
 }
-
+.noty_text {
+  font-size: 1.25rem;
+  font-family: FuturaStd-Book;
+}
+.receipts-container {
+  margin-top: 20px;
+}
 /* active state */
 textarea {
   margin: 16px 0px 0px 0px !important;
@@ -217,11 +223,10 @@ textarea {
 textarea:focus ~ label.custom-top, textarea:valid ~ label.custom-top{
   top:-10px !important;
 }
-input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label{
+input:focus ~ label, input ~ label, textarea:focus ~ label, textarea:valid ~ label{
   top:-10px;
   font-size:14px;
   font-family: FuturaStd-Book;
-  color:#ed7161;
 }
 
 /* BOTTOM BARS ================================= */
@@ -483,7 +488,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   justify-content: center;
 }
 .buttonRecipe {
-  width: 168px;
+  width: 212px;
   height: 54px;
   background-color: #ed7161;
   border: 0px;
@@ -1438,11 +1443,20 @@ input.form-control1:focus {
   .marginCustomTop > .select {
       height: 27px !important;
   }
+  .fixedChanged {
+      height: 77px;
+  }
+  .receipts-container {
+    margin-top: 0px;
+  }
+  .forceRemoveHeight {
+    margin-top: -40px !important;
+  }
   .miniImage {
     width: 130px;
     float: right;
     margin-top: 20px;
-}
+  }
 
 }
 @media only screen and (max-width: 553px) {

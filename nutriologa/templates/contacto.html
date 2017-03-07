@@ -8,6 +8,7 @@
 
 <!-- section 1 services -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.4.1/packaged/jquery.noty.packaged.min.js'></script>
 <script>
   function sendEmail() {
     var myform = document.getElementById("contact");
@@ -46,13 +47,13 @@
             <form id='contact' onsubmit="sendEmail(); return false;">
               <div class="horizontal-row change-row">
                 <div class="group space-group">
-                  <input type="text" name="name" required>
+                  <input type="text" class="sendNewsletter" name="name" required>
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Nombre(s)</label>
                 </div>
                 <div class="group space-group">
-                  <input type="text" name="last_name" required>
+                  <input type="text" class="sendNewsletter" name="last_name" required>
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Apellido</label>
@@ -60,13 +61,13 @@
               </div>
               <div class="horizontal-row change-row">
                 <div class="group space-group">
-                  <input type="text" name="email" required>
+                  <input type="text" class="sendNewsletter" name="email" required>
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Correo electrónico</label>
                 </div>
                 <div class="group space-group">
-                  <input type="text" name="phone" required>
+                  <input type="text" class="sendNewsletter" name="phone">
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Teléfono (opcional)</label>
@@ -85,7 +86,7 @@
               </div>
               <div class="horizontal-row add-another-margin-bottom-one">
                 <div class="group textarea-group">
-                  <input type="text" name="date" required>
+                  <input type="text" class="sendNewsletter" name="date">
                   <span class="highlight"></span>
                   <span class="bar"></span>
                   <label>Día, mes.</label>

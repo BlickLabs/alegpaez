@@ -13,8 +13,10 @@
       function loadModal(a) {
         var modal = $('#unique-recipe-modal');
         modal.addClass('slideInLeft');
-        modal.modal();
         $('.recipe-slick-content').slick('refresh');
+        setTimeout(function () {
+          modal.modal();
+        }, 600);
         setTimeout(function () {
           $('.recipe-slick-content').slick('slickGoTo', a - 1);
         }, 500);
