@@ -1479,6 +1479,14 @@ input.form-control1:focus {
     float: right;
     margin-top: 20px;
   }
+  .index-description {
+    margin-right: 25px !important;
+  }
+  .name-receipt {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
 
 }
 @media only screen and (max-width: 553px) {

@@ -109,17 +109,17 @@
                   <div class='recipeContent'>
                     <div class="recipt" style="background-image:URL('{{recipe.image.url}}')"></div>
                     <div class='recipeDescription'>
-                      <div class="description">
+                      <div class="description index-description" style="margin-right: 30px !important;">
                         <div>{{recipe.description}}</div>
                       </div>
                       {% if recipe.category == 'breakfast'%}
-                        <div class="name-receipt breakfast"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
+                        <div class="name-receipt breakfast" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
                       {% elif recipe.category == 'collation' %}
-                        <div class="name-receipt colations"><img class="smallIcon" src="{% static 'img/receipts/colations.png'%}"/>{{recipe.title}}</div>
+                        <div class="name-receipt colations" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/colations.png'%}"/>{{recipe.title}}</div>
                       {% elif recipe.category == 'dinner' %}
-                        <div class="name-receipt dinner"><img class="smallIcon" src="{% static 'img/receipts/snack.png'%}"/>{{recipe.title}}</div>
+                        <div class="name-receipt dinner" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/snack.png'%}"/>{{recipe.title}}</div>
                       {% elif recipe.category == 'meal' %}
-                        <div class="name-receipt meats"><img class="smallIcon" src="{% static 'img/receipts/meats.png'%}"/>{{recipe.title}}</div>
+                        <div class="name-receipt meats" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/meats.png'%}"/>{{recipe.title}}</div>
                       {% endif %}
                     </div>
                   </div>
