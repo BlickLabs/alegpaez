@@ -103,6 +103,17 @@ class RecipesTemplateView(ListView):
             queryset = self.model.objects.all().order_by('-date')
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super(RecipesTemplateView, self).get_context_data(**kwargs)
+        recipes = context.get('recipes')
+        for recipe in recipes:
+            description = recipe.description.replace('\n', '<br>')
+            recipe.description = description
+        context['recipes'] = recipes
+        return context
+
+
+
 
 class VideosTemplateView(TemplateView):
     template_name = 'videos.html'
@@ -120,10 +131,9 @@ class HomeTemplateView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomeTemplateView, self).get_context_data(**kwargs)
         thumbnails = []
-        posts = WpPosts.objects.filter(post_status='publish')[:5]
+        posts = WpPosts.objects.filter(post_status='publish')[:4]
         recipes = Recipe.objects.all().order_by('-date')[:3]
         metas = WpPostmeta.objects.all()
-        from datetime import datetime
         for post in posts:
             wp_date = post.post_date
             date_object = str(wp_date.date()).replace('-', '/')
