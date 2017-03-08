@@ -119,6 +119,11 @@ button.close:focus {
   flex-direction: row;
   justify-content: center;
 }
+.name-receipt-modal {
+  width: 372px;
+  position:absolute;
+  bottom:0;
+}
 .close {
   z-index: 1;
 }
@@ -1249,8 +1254,9 @@ input.form-control1:focus {
     padding-right: 5px !important;
   }
   .description {
-    margin-top: 40px;
+    margin-top: 9px !important;
     height: 9em !important;
+    margin-bottom: 9px !important;
   }
   .recipeContent > .recipt {
     width: 100% !important;
@@ -1282,8 +1288,8 @@ input.form-control1:focus {
   }
   .recipeDescription {
     width: 100%;
-    height: 170px;
-    margin-bottom: 70px;
+    height: 194px;
+    flex-direction: column;
   }
   .space-group {
     margin-left: 0px;
@@ -1481,6 +1487,12 @@ input.form-control1:focus {
   }
   .index-description {
     margin-right: 25px !important;
+  }
+  .name-receipt {
+    width: 100% !important;
+  }
+  .name-receipt-modal {
+    position: relative !important;
   }
 
 }
