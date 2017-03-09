@@ -131,7 +131,7 @@ class HomeTemplateView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomeTemplateView, self).get_context_data(**kwargs)
         thumbnails = []
-        posts = WpPosts.objects.filter(post_status='publish')[:4]
+        posts = WpPosts.objects.filter(post_status='publish').order_by('-post_date')[:4]
         recipes = Recipe.objects.all().order_by('-date')[:3]
         for recipe in recipes:
             description = recipe.description.replace('\n', '<br>')
@@ -141,20 +141,21 @@ class HomeTemplateView(TemplateView):
         for post in posts:
             wp_date = post.post_date
             date_object = str(wp_date.date()).replace('-', '/')
-            print date_object
             slug = slugify(post.post_title)
-            print slug
             url = '%s/%s/' % (date_object, slug )
-            print url
             post.link = url
             for meta in metas:
                 if meta.post_id == post.id and meta.meta_key == '_thumbnail_id':
                     thumbnail_id = meta.meta_value
                     thumb = WpPostmeta.objects.get(post_id=thumbnail_id, meta_key='_wp_attached_file')
                     thumbnails.append(Thumbnail(post.id, thumb.meta_value))
+        for post in posts:
+            for thumb in thumbnails:
+                if post.id == thumb.post_id:
+                    post.thumbnail = thumb.url
+                    break
         context['posts'] = posts
         context['recipes'] = recipes
-        context['thumbnails'] = thumbnails
         context['metas'] = metas
         return context
 

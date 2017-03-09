@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% load static from staticfiles %}
 {% load settings_tag %}
 {% block title %}Alejandra Gutiérrez Paez{% endblock %}
@@ -7,160 +7,177 @@
 {% endblock %}
 {% block content %}
   <section class="small-images reducePaddingInMovil" id='principal'>
-      <div class="container custom_container">
-          <div class="row flex_container">
-              <div class="text-center">
-                  <div class="service-box">
-                      <img class="sr-icons one" src="{% static 'img/icons/fill-1@3x.png'%}">
-                      <p class="service_text custom-height"> Health Coach </p>
-                  </div>
-              </div>
-
-              <div class="text-center">
-                  <div class="service-box special-width">
-                      <img class="sr-icons two" src="{% static 'img/icons/page-1@3x.png'%}">
-                      <p class="service_text"> Consultas presenciales y online </p>
-                  </div>
-              </div>
-
-
-              <div class="text-center">
-                  <div class="service-box">
-                      <img class="sr-icons three" src="{% static 'img/icons/group-37@3x.png'%}">
-                      <p class="service_text"> Educadora en Diabetes </p>
-                  </div>
-              </div>
-
-              <!-- section part 4 -->
-              <div class="text-center">
-                  <div class="service-box">
-                      <img class="sr-icons four" src="{% static 'img/icons/group-36@3x.png'%}">
-                      <p class="service_text custom-height-two"> Nutrición deportiva </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <section class="gray-background reducePaddingInMovil">
-      <div class="container custom_container">
-          <div class="flex_container">
-            <div class="titleHome-testimonials">Algunos de nuestros clientes</div>
-          </div>
-          <div class="row flex_container spacing">
-            <div class="client">
-              <div class="thumbnail">
-                <div class="user_img">
-                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-6@3x.png'%}">
-                </div>
-                <div class="caption">
-                  <h2 class="user_name" style="text-align: center;"> Ileana Castro </h2>
-                  <p class="sub_caption special-caption" style="text-align: center;">“Aprendí a comer bien y balanceado, a saber qué es lo que me hace daño  y cómo reemplazarlo por algo igualmente rico pero saludable.”</p>
-                </div>
-              </div>
-            </div>
-            <div class="client">
-              <div class="thumbnail">
-                <div class="user_img">
-                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-5@3x.png'%}">
-                </div>
-                <div class="caption">
-                  <h2 class="user_name" style="text-align: center;"> Carlos Cervantes </h2>
-                  <p class="sub_caption" style="text-align: center;">“La Lic. en Nutrición Alejandra no te entrega un dieta, te ayuda a cambiar tu estilo de vida para mejorar tu salud.”</p>
-                </div>
-              </div>
-            </div>
-            <div class="client hiddeOnMobil">
-              <div class="thumbnail">
-                <div class="user_img">
-                  <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-7@3x.png'%}">
-                </div>
-                <div class="caption">
-                  <h2 class="user_name" style="text-align: center;"> Yolanda Vargas </h2>
-                  <p class="sub_caption" style="text-align: center;">“Me siento más ligera y alegre, además de que es un plan hecho para mi con la comida que me gusta.”</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </section>
-  <section class="last-recipes reducePaddingInMovil">
+    <div class="container custom_container">
       <div class="row flex_container">
-        <div class="header text-center">
-          <div class="titleHome">Últimas Recetas</div>
-          <div class="sub-header line-height">Conoce las diferentes y fáciles recetas que te puedes hacer en cualquier momento del día</div>
+        <div class="text-center">
+          <div class="service-box">
+            <img class="sr-icons one" src="{% static 'img/icons/fill-1@3x.png' %}">
+            <p class="service_text custom-height"> Health Coach </p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <div class="service-box special-width">
+            <img class="sr-icons two" src="{% static 'img/icons/page-1@3x.png' %}">
+            <p class="service_text"> Consultas presenciales y online </p>
+          </div>
+        </div>
+
+
+        <div class="text-center">
+          <div class="service-box">
+            <img class="sr-icons three" src="{% static 'img/icons/group-37@3x.png' %}">
+            <p class="service_text"> Educadora en Diabetes </p>
+          </div>
+        </div>
+
+        <!-- section part 4 -->
+        <div class="text-center">
+          <div class="service-box">
+            <img class="sr-icons four" src="{% static 'img/icons/group-36@3x.png' %}">
+            <p class="service_text custom-height-two"> Nutrición deportiva </p>
+          </div>
         </div>
       </div>
-      <div class="row flex_container">
-        {% for recipe in recipes%}
-          {% if forloop.counter == 3%}
-            <div class="pointer image-container hiddeOnMobil" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
-              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;object-fit: cover;">
+    </div>
+  </section>
+  <section class="gray-background reducePaddingInMovil">
+    <div class="container custom_container">
+      <div class="flex_container">
+        <div class="titleHome-testimonials">Algunos de nuestros clientes</div>
+      </div>
+      <div class="row flex_container spacing">
+        <div class="client">
+          <div class="thumbnail">
+            <div class="user_img">
+              <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-6@3x.png' %}">
             </div>
-          {% else %}
-            <div class="pointer image-container" data-toggle="modal" data-target="#recipe-home-{{forloop.counter}}">
-              <img class="image-recipe" src="{{recipe.image.url}}" style="width: 506px; height: 450px;object-fit: cover;">
+            <div class="caption">
+              <h2 class="user_name" style="text-align: center;"> Ileana Castro </h2>
+              <p class="sub_caption special-caption" style="text-align: center;">“Aprendí a comer bien y balanceado, a
+                saber qué es lo que me hace daño y cómo reemplazarlo por algo igualmente rico pero saludable.”</p>
             </div>
-          {% endif %}
-          <div class="modal fade" id="recipe-home-{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content recipe-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img class='closeImageStyle' style='width: 20.9px;margin-top: -23px;' src="{% static 'img/icons/cruz.svg'%}"></img></button>
-                  <div class='recipeContent'>
-                    <div class="recipt" style="background-image:URL('{{recipe.image.url}}')"></div>
-                    <div class='recipeDescription'>
-                      <div class="description index-description" style="margin-right: 30px !important;">
-                        <div>
-                          {% autoescape off %}
-                            {{recipe.description}}
-                          {% endautoescape %}
-                        </div>
-                      </div>
-                      {% if recipe.category == 'breakfast'%}
-                        <div class="name-receipt breakfast" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/breakfast.png'%}"/>{{recipe.title}}</div>
-                      {% elif recipe.category == 'collation' %}
-                        <div class="name-receipt colations" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/colations.png'%}"/>{{recipe.title}}</div>
-                      {% elif recipe.category == 'dinner' %}
-                        <div class="name-receipt dinner" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/snack.png'%}"/>{{recipe.title}}</div>
-                      {% elif recipe.category == 'meal' %}
-                        <div class="name-receipt meats" style="position: absolute;bottom: 0;width: 372px;"><img class="smallIcon" src="{% static 'img/receipts/meats.png'%}"/>{{recipe.title}}</div>
-                      {% endif %}
+          </div>
+        </div>
+        <div class="client">
+          <div class="thumbnail">
+            <div class="user_img">
+              <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-5@3x.png' %}">
+            </div>
+            <div class="caption">
+              <h2 class="user_name" style="text-align: center;"> Carlos Cervantes </h2>
+              <p class="sub_caption" style="text-align: center;">“La Lic. en Nutrición Alejandra no te entrega un dieta,
+                te ayuda a cambiar tu estilo de vida para mejorar tu salud.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="client hiddeOnMobil">
+          <div class="thumbnail">
+            <div class="user_img">
+              <img class="img img-responsive thumb-img" src="{% static 'img/testimonials/group-7@3x.png' %}">
+            </div>
+            <div class="caption">
+              <h2 class="user_name" style="text-align: center;"> Yolanda Vargas </h2>
+              <p class="sub_caption" style="text-align: center;">“Me siento más ligera y alegre, además de que es un
+                plan hecho para mi con la comida que me gusta.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="last-recipes reducePaddingInMovil">
+    <div class="row flex_container">
+      <div class="header text-center">
+        <div class="titleHome">Últimas Recetas</div>
+        <div class="sub-header line-height">Conoce las diferentes y fáciles recetas que te puedes hacer en cualquier
+          momento del día
+        </div>
+      </div>
+    </div>
+    <div class="row flex_container">
+      {% for recipe in recipes %}
+        {% if forloop.counter == 3 %}
+          <div class="pointer image-container hiddeOnMobil" data-toggle="modal"
+               data-target="#recipe-home-{{ forloop.counter }}">
+            <img class="image-recipe" src="{{ recipe.image.url }}"
+                 style="width: 506px; height: 450px;object-fit: cover;">
+          </div>
+        {% else %}
+          <div class="pointer image-container" data-toggle="modal" data-target="#recipe-home-{{ forloop.counter }}">
+            <img class="image-recipe" src="{{ recipe.image.url }}"
+                 style="width: 506px; height: 450px;object-fit: cover;">
+          </div>
+        {% endif %}
+        <div class="modal fade" id="recipe-home-{{ forloop.counter }}" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content recipe-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img class='closeImageStyle'
+                                                                                                 style='width: 20.9px;margin-top: -23px;'
+                                                                                                 src="{% static 'img/icons/cruz.svg' %}"></img>
+                </button>
+                <div class='recipeContent'>
+                  <div class="recipt" style="background-image:URL('{{ recipe.image.url }}')"></div>
+                  <div class='recipeDescription'>
+                    <div class="description">
+                      <div>{{ recipe.description }}</div>
                     </div>
+                    {% if recipe.category == 'breakfast' %}
+                      <div class="name-receipt breakfast"><img class="smallIcon"
+                                                               src="{% static 'img/receipts/breakfast.png' %}"/>{{ recipe.title }}
+                      </div>
+                    {% elif recipe.category == 'collation' %}
+                      <div class="name-receipt colations"><img class="smallIcon"
+                                                               src="{% static 'img/receipts/colations.png' %}"/>{{ recipe.title }}
+                      </div>
+                    {% elif recipe.category == 'dinner' %}
+                      <div class="name-receipt dinner"><img class="smallIcon"
+                                                            src="{% static 'img/receipts/snack.png' %}"/>{{ recipe.title }}
+                      </div>
+                    {% elif recipe.category == 'meal' %}
+                      <div class="name-receipt meats"><img class="smallIcon"
+                                                           src="{% static 'img/receipts/meats.png' %}"/>{{ recipe.title }}
+                      </div>
+                    {% endif %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        {% endfor %}
-      </div>
-      <div class="row flex_container margin-top-button">
-        <a class="link_morebtn" href="{% url 'landing:recetas'%}" style="color: white;"><button class="buttonRecipe">  Ver más </button></a>
-      </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row flex_container margin-top-button">
+      <a class="link_morebtn" href="{% url 'landing:recetas' %}" style="color: white;">
+        <button class="buttonRecipe"> Ver más</button>
+      </a>
+    </div>
   </section>
   <div class="row flex_container">
     <div class="separator"></div>
   </div>
   <div class="blogspot-row reducePaddingInMovil">
-      <div class="row flex_container">
-        <div class="header text-center">
-          <div class="titleHome">Blogposts destacados</div>
-        </div>
+    <div class="row flex_container">
+      <div class="header text-center">
+        <div class="titleHome">Blogposts destacados</div>
       </div>
-      <div class="row flex_container margin-bottom-middle">
-        {% for post in posts %}
-          <a href="{% settings_value "WORDPRESS_SITE_URL" %}/{{ post.link }}">
-            <div class="blog_img pointer">
-              {% for thumbnail in thumbnails %}
-                {% if thumbnail.post_id == post.id %}
-                  <div class="blog-img" style='background: URL({% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }})'></div>
-                  <!--<img class="blog-img" src="{% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ thumbnail.url }}">-->
-                {% endif %}
-              {% endfor %}
-              <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>
-            </div>
-          </a>
-        {% endfor %}
-      </div>
+    </div>
+    <div class="row flex_container margin-bottom-middle">
+      {% for post in posts %}
+        <a href="{% settings_value "WORDPRESS_SITE_URL" %}/{{ post.link }}">
+          <div class="blog_img pointer">
+            {% if post.thumbnail != None %}
+              <div class="blog-img" style='background: URL({% settings_value "WORDPRESS_SITE_URL" %}wp-content/uploads/{{ post.thumbnail }})'></div>
+            {% else %}
+              <div class="blog-img" style='background: URL(http://imagenesfotos.com/wp-content/2009/08/fruta-5.jpg)'></div>
+            {% endif %}
+            <h4 class="blog_caption" style="width:173px;text-align: center;"> {{ post.post_title }}</h4>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
   </div>
   <section class="last-bg-image parallaxEffect reducePaddingInMovil">
     <div class="row flex_container">
@@ -170,7 +187,9 @@
       </div>
     </div>
     <div class="row flex_container">
-      <a class="link_morebtn" href="{% url 'landing:servicios'%}" style="color: white;"><button class="buttonRecipe">  Ver paquetes y servicios </button></a>
+      <a class="link_morebtn" href="{% url 'landing:servicios' %}" style="color: white;">
+        <button class="buttonRecipe"> Ver paquetes y servicios</button>
+      </a>
     </div>
   </section>
 

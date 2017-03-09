@@ -114,6 +114,9 @@ class WpPosts(models.Model):
         managed = False
         db_table = 'wp_posts'
 
+    def __unicode__(self):
+        return self.post_title
+
 
 class WpTermRelationships(models.Model):
     object_id = models.BigIntegerField()
