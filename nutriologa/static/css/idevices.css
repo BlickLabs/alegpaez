@@ -259,7 +259,18 @@
     background-size:cover;
   }
   .play{width:3em}.name-clip{font-size:medium;padding-top:23px;color:#4a4a4a}.dinner{background:#f7c42a}.colations{background:#ff9f00}.breakfast{background:#ed7161}.meats{background:#bd4243}
-  .name-receipt{padding-top:10px;color:#fff;font-size:16px;padding-bottom:10px}
+  .name-receipt{
+    padding-top:10px;
+    color:#fff;
+    font-size:16px;
+    padding-bottom:10px;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 257px;
+    align-items: center;
+  }
   section{padding:81px 0 300px!important}
   .button,.button:hover{
     width:115px;
