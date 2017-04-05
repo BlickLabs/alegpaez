@@ -716,7 +716,7 @@ input:focus ~ .highlight, textarea:focus ~ .highlight {
   padding-right: 121px;
   padding-bottom: 33px;
 }
-.smallIcon{padding-right: 10px;}
+.smallIcon{padding-right: 10px;padding-left: 10px;}
 .modal-lg {width: 871px; !important}
 .recipe-content {
     border-radius: 0px !important;
