@@ -268,6 +268,7 @@
   }
   .play{width:3em}.name-clip{font-size:medium;padding-top:23px;color:#4a4a4a}.dinner{background:#f7c42a}.colations{background:#ff9f00}.breakfast{background:#ed7161}.meats{background:#bd4243}
    .name-receipt-modal {
+      font-family: FuturaStd-Heavy;
       width: 372px;
       padding-top: 10px;
       color: #fff;
