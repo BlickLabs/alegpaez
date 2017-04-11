@@ -1488,11 +1488,9 @@ input.form-control1:focus {
   .index-description {
     margin-right: 25px !important;
   }
-  .name-receipt {
-    width: 100% !important;
-  }
   .name-receipt-modal {
     position: relative !important;
+    width: 100% !important;
   }
 
 }
