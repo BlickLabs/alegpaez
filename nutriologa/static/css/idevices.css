@@ -1,3 +1,11 @@
+
+
+@media only screen and (max-width: 767px) {
+  .name-receipt-modal {
+    position: relative !important;
+    width: 100% !important;
+  }
+}
 /* ----------- iPad mini ----------- */
 
 /* Portrait and Landscape */
